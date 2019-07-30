@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>傻瓜式静态博客搭建(Github版) | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="返回主页 声明：此文在论如何搭建一个静态博客的基础上建立的，并非原创  搭建博客材料：git Node.js Github账号 注意：由于Git官网下载需要8小时(速度大约1000B/s,Git大小17Mb左右)，所以推荐在电脑管家——软件管理——搜索Git 下载(大约1分钟) 或 在百度搜索百度网盘下载(大约10分钟(非会员)) P.S. 本人电脑性能 处理器：Intel(R) Code(TM)">
+<meta name="keywords" content="using">
+<meta property="og:type" content="article">
+<meta property="og:title" content="傻瓜式静态博客搭建(Github版)">
+<meta property="og:url" content="http://liziweiprogram.github.io/2019/07/29/静态Blog搭建/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="返回主页 声明：此文在论如何搭建一个静态博客的基础上建立的，并非原创  搭建博客材料：git Node.js Github账号 注意：由于Git官网下载需要8小时(速度大约1000B/s,Git大小17Mb左右)，所以推荐在电脑管家——软件管理——搜索Git 下载(大约1分钟) 或 在百度搜索百度网盘下载(大约10分钟(非会员)) P.S. 本人电脑性能 处理器：Intel(R) Code(TM)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/66144.png">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/66146.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/66598.png">
+<meta property="og:image" content="https://i.loli.net/2019/03/09/5c83506251438.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/03/09/5c835181c12d8.jpg">
+<meta property="og:updated_time" content="2019-07-29T11:04:48.276Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="傻瓜式静态博客搭建(Github版)">
+<meta name="twitter:description" content="返回主页 声明：此文在论如何搭建一个静态博客的基础上建立的，并非原创  搭建博客材料：git Node.js Github账号 注意：由于Git官网下载需要8小时(速度大约1000B/s,Git大小17Mb左右)，所以推荐在电脑管家——软件管理——搜索Git 下载(大约1分钟) 或 在百度搜索百度网盘下载(大约10分钟(非会员)) P.S. 本人电脑性能 处理器：Intel(R) Code(TM)">
+<meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/66144.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq Time</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-静态Blog搭建" class="post-静态Blog搭建 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      傻瓜式静态博客搭建(Github版)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://liziweiprogram.github.io/2019/07/29/静态Blog搭建/" data-id="cjyp4u5kx00026stopps1tdwm" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p><a href="https://liziweiprogram.github.io">返回主页</a></p>
+<p><strong>声明：此文在<a href="https://luckyfuy.cf/2019/03/09/Building-Blog/" target="_blank" rel="noopener">论如何搭建一个静态博客</a>的基础上建立的，并非原创</strong></p>
+<hr>
+<h4 id="搭建博客材料：git-Node-js-Github账号"><a href="#搭建博客材料：git-Node-js-Github账号" class="headerlink" title="搭建博客材料：git Node.js Github账号"></a>搭建博客材料：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> <a href="https://nodejs.org/dist/v10.16.0/node-v10.16.0-x64.msi" target="_blank" rel="noopener">Node.js</a> <a href="https://github.com" target="_blank" rel="noopener">Github</a>账号</h4><hr>
+<p><strong>注意：由于Git官网下载需要8小时(速度大约1000B/s,Git大小17Mb左右)，所以推荐在电脑管家——软件管理——搜索Git 下载(大约1分钟) 或 在百度搜索百度网盘下载(大约10分钟(非会员))</strong></p>
+<h6 id="P-S-本人电脑性能"><a href="#P-S-本人电脑性能" class="headerlink" title="P.S. 本人电脑性能"></a>P.S. 本人电脑性能</h6><ul>
+<li>处理器：Intel(R) Code(TM) i7-8565CPU @ 1.80GHz 1.99Ghz</li>
+<li>内存条：8.00GB</li>
+<li>系统：Windows x64</li>
+</ul>
+<hr>
+<h3 id="Git-Bash的初始使用"><a href="#Git-Bash的初始使用" class="headerlink" title="Git-Bash的初始使用"></a>Git-Bash的初始使用</h3><p>Git Node.js下载完成后打开安装Git文件夹中的Git-Bash.exe</p>
+<p><img src="https://cdn.luogu.org/upload/pic/66144.png" alt="Git-Bash"></p>
+<p>注意：打开Git-Bash的时候会有报错信息 直接忽略按I see即可</p>
+<p><img src="https://cdn.luogu.org/upload/pic/66146.png" alt="Git-Bash报错"></p>
+<h4 id="检测Node-js安装"><a href="#检测Node-js安装" class="headerlink" title="检测Node.js安装"></a>检测Node.js安装</h4><p>在Git-Bash界面输入<code>node -v</code> 和 <code>npm -v</code>检测Node.js安装</p>
+<p>提示版本号信息则说明安装成功</p>
+<p><img src="https://i.loli.net/2019/03/09/5c834c7b3eb50.jpg" alt="安装成功"></p>
+<h3 id="hexo登场"><a href="#hexo登场" class="headerlink" title="hexo登场"></a>hexo登场</h3><p>参照<code>git-bash的初始使用</code>打开git-bash并输入<code>npm install hexo-cli -g</code></p>
+<p>同样，你可以输入<code>hexo -v</code>检测安装hexo是否成功（成功会跳出版本号信息）</p>
+<p><img src="https://i.loli.net/2019/03/09/5c834da98c3f3.jpg" alt="安装成功"></p>
+<h2 id="开始搭建博客"><a href="#开始搭建博客" class="headerlink" title="开始搭建博客"></a>开始搭建博客</h2><p>首先新建文件夹，这个文件夹是你未来的博客文件夹，所以命名可以命名为blog</p>
+<p>在这个空文件夹中右键，会看到一个<code>Git-Bash There</code>，点开</p>
+<p><img src="https://cdn.luogu.org/upload/pic/66598.png" alt="Git-Bash There"></p>
+<p>输入<code>hexo init</code></p>
+<p><del>然后祈祷一会儿</del></p>
+<p>当你的文件结构长这样时就好了</p>
+<p><img src="https://i.loli.net/2019/03/09/5c83506251438.jpg" alt="文件结构"></p>
+<p>还是在这个文件夹里输入<code>hexo s</code>(注意不要点到子文件夹里Git-Bash了)</p>
+<p>打开提示最后一行的网址(INFO Hexo is runnming at <code>http://localhost:4000</code> . Press Ctrl + C to stop)</p>
+<p><img src="https://i.loli.net/2019/03/09/5c835181c12d8.jpg" alt="hexo s"></p>
+<p>结束预览请按Ctrl + C 或者关闭Git-Bash</p>
+<p>如果打不开网页，那么十有八九是端口被占用了，只要输入<code>hexo s -p 端口号</code>，然后打开<code>http://localhost:端口号/</code>就行了(端口号随你填)。</p>
+<p><a href="https://luckyfuy.cf/2019/03/09/Building-Blog/" target="_blank" rel="noopener">论如何搭建一个静态博客</a>到这里就结束了，然后静态博客搭建还没有结束。。。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/07/29/静态Blog搭建/">
+    <time datetime="2019-07-29T06:38:11.000Z" class="entry-date">
+        2019-07-29
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/using/">using</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+    
+        <span class="nav-next"><a href="/2019/07/27/Vector/" rel="next">Vector基础 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/29/静态Blog搭建/">傻瓜式静态博客搭建(Github版)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/27/Vector/">Vector基础</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/27/index/">Welcome</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/index/" style="font-size: 10px;">index</a> <a href="/tags/structure/" style="font-size: 10px;">structure</a> <a href="/tags/using/" style="font-size: 10px;">using</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
