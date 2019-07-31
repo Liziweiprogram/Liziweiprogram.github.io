@@ -83,7 +83,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/9102/07/30/Timeline/" data-id="cjyr9dnop0008dwtotzmwqlo8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/9102/07/30/Timeline/" data-id="cjyrb46ft000ax8tojzaq5ee8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -141,7 +141,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/9102/07/27/index/" data-id="cjyr9dnoq0009dwtow8sjcof2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/9102/07/27/index/" data-id="cjyrb46fx000fx8tojxv3hv7h" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -191,6 +191,94 @@
 
 
   
+    <article id="post-Search" class="post-Search post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2019/07/31/Search/">Search</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/31/Search/" data-id="cjyrb46fp0006x8tom4px2slb" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="搜索-硬核翻译search"><a href="#搜索-硬核翻译search" class="headerlink" title="搜索(硬核翻译search)"></a>搜索(硬核翻译search)</h2><h3 id="搜索是什么"><a href="#搜索是什么" class="headerlink" title="搜索是什么"></a>搜索是什么</h3><p>众所周知,搜索是这样的</p>
+<p><img src="https://i.loli.net/2019/07/31/5d41922da7a2d71410.png" alt="炉石搜索"></p>
+<p><img src="https://i.loli.net/2019/07/31/5d419352b7ab818491.jpg" alt="部落冲突标准卡白云"></p>
+<p><img src="https://i.loli.net/2019/07/31/5d4193af9500154491.jpg" alt="疑难杂症解决方案"></p>
+<p>或者是<br><img src="https://i.loli.net/2019/07/31/5d4193eccc4cf25332.png" alt="本站搜索"></p>
+<p><del>emmmm情况有些蕉♂灼了</del></p>
+<p>看见这篇博客标签了吗<code>Algorithm</code></p>
+<p>所以想到了吧,这就是那个</p>
+<ul>
+<li>以模拟为主，对代码能力要求通常较高</li>
+<li>在普及组和提高组都是常考题型</li>
+<li>没有DP和数论的复杂公式，也没有图论和数据结构的特殊性质</li>
+<li>在学习的时候主要以代码实践为主</li>
+</ul>
+<p>的搜索哦</p>
+<h3 id="搜索概念"><a href="#搜索概念" class="headerlink" title="搜索概念"></a>搜索概念</h3><p>1.状态：<br>    对<strong>搜索情况的描述</strong>就叫做<strong>状态</strong><br>    比如你遍历一个树，你可以<strong>把遍历到的节点作为状态</strong>，也可以把<strong>遍历过的节点作为状态</strong><br>2.搜索树：<br>    <strong>不同的状态之间能够相互转移</strong>，即我可以从一个状态变化成另一个状态<br>    例如把一个序列作为状态，当你对这个序列<strong>进行操作</strong>后，你能得到另一个序列，表示你<strong>移动到了另一个状态</strong><br>    不同状态之间的<strong>转移关系</strong>组成了一个<strong>树结构</strong>（虽然有时候也可能是图结构）<br>    因此<strong>状态也常常被称为节点</strong></p>
+<h3 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h3><p>英文为Depth First Search，简写为DFS(Dark♂ Fantasy Search)</p>
+<p>其搜索方式为，在某个状态A，找到一个可以由此状态转移到的状态B，然后转移到状态B，遍历完B<strong>所有的后续状态后</strong>，<strong>返回</strong>状态A，再寻找A的另一个可转移状态C，如此往复，直至<strong>所有状态被遍历完</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//标准dfs格式</span><br><span class="line">void dfs(...)</span><br><span class="line">&#123;</span><br><span class="line">	...</span><br><span class="line">	for(...)</span><br><span class="line">	&#123;</span><br><span class="line">		...</span><br><span class="line">		dfs(...);</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">	return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="洛谷P1036选数"><a href="#洛谷P1036选数" class="headerlink" title="洛谷P1036选数"></a>洛谷P1036选数</h5><p>先看看我自己的代码</p>
+<p>看过DFS很清楚这题能用DFS A掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int x[20],n,k;</span><br><span class="line">bool isprime(int n)</span><br><span class="line">&#123;</span><br><span class="line">    if (n &lt; 2) return false;</span><br><span class="line">    else if(n == 2) return true;</span><br><span class="line">    for (int i = 2;i * i &lt;= n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">    	if (n % i == 0) return false;</span><br><span class="line">	&#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int dfs(int left,int sum,int s,int e)</span><br><span class="line">&#123;</span><br><span class="line">    if(left == 0) </span><br><span class="line">	&#123;</span><br><span class="line">		//cout &lt;&lt; &quot;already_sum:&quot; &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">		return isprime(sum);</span><br><span class="line">	&#125;</span><br><span class="line">    int summer_light = 0;</span><br><span class="line">    for(int i = s;i &lt;= e;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">        summer_light += dfs(left - 1,sum + x[i],i + 1,e);</span><br><span class="line">    &#125;</span><br><span class="line">    //cout &lt;&lt; &quot;left:&quot; &lt;&lt; left &lt;&lt; &quot; sum:&quot; &lt;&lt; sum &lt;&lt; &quot; s:&quot; &lt;&lt; s &lt;&lt; &quot; e:&quot; &lt;&lt; e &lt;&lt; endl;</span><br><span class="line">    return summer_light;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    for(int i = 0;i &lt; n;i ++)cin &gt;&gt; x[i];</span><br><span class="line">    cout &lt;&lt; dfs(k,0,0,n-1);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对应一下就是DFS</p>
+<h5 id="枚举子集"><a href="#枚举子集" class="headerlink" title="枚举子集"></a>枚举子集</h5><blockquote>
+<h5 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h5><p>有n个正整数，找出其中和为t(t也是正整数)的可能的组合方式。如：</p>
+<p>n=5,5个数分别为1,2,3,4,5，t=5； </p>
+<p>那么可能的组合有5=1+4和5=2+3和5=5三种组合方式。</p>
+<p>#####输入 </p>
+<p>输入的第一行是两个正整数n和t，用空格隔开，其中1&lt;=n&lt;=20,表示正整数的个数，t为要求的和(1&lt;=t&lt;=1000) </p>
+<p>接下来的一行是n个正整数，用空格隔开。</p>
+<h5 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h5><p>和为t的不同的组合方式的数目。</p>
+<h5 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5 5 </span><br><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h5 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h5></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p>(这道题目是一个叫OpenJudge的 难道这OJ叫OJOJ?<del>不如倒着读叫JOJO</del>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void dfs(int s)</span><br><span class="line">&#123;</span><br><span class="line">    if(s &gt; n)</span><br><span class="line">    &#123;</span><br><span class="line">        if(sum == t) tot ++;//增加方案数量</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    sum += a[s];//算上a[s]</span><br><span class="line">    dfs(s + 1);</span><br><span class="line">    sum -= a[s];//不算a[s]同时保证sum的值</span><br><span class="line">    dfs(s + 1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="回溯-su"><a href="#回溯-su" class="headerlink" title="回溯(su)"></a>回溯(su)</h4>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/07/31/Search/">
+    <time datetime="2019-07-31T13:04:23.000Z" class="entry-date">
+        2019-07-31
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
+
+    </footer>
+</article>
+
+
+
+
+
+
+  
     <article id="post-Linear-List" class="post-Linear-List post type-post status-publish format-standard hentry">
     <!---->
 
@@ -206,7 +294,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/31/Linear-List/" data-id="cjyr9dnoo0006dwto5xcfdj2k" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/31/Linear-List/" data-id="cjyrb46fk0003x8towu8a4yhh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -272,7 +360,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/30/Build-Blog(to-another-place)/" data-id="cjyr9dnog0001dwtog9oy1oik" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/30/Build-Blog(to-another-place)/" data-id="cjyrb46fg0001x8tox90dsy6y" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -330,7 +418,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/29/Build-Blog(in Github)/" data-id="cjyr9dnok0003dwto8xpfqcbp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/29/Build-Blog(in Github)/" data-id="cjyrb46fr0008x8toyt2vmxky" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -467,7 +555,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/27/Vector/" data-id="cjyr9dnot000cdwto04oz8ueu" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/07/27/Vector/" data-id="cjyrb46fw000dx8tor9vfmedz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -656,15 +744,15 @@
           </li>
         
           <li>
+            <a href="/2019/07/31/Search/">Search</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/31/Linear-List/">Linear-List</a>
           </li>
         
           <li>
             <a href="/2019/07/30/Build-Blog(to-another-place)/">Build-Blog(to-another-place)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/29/Build-Blog(in Github)/">Build-Blog(in Github)</a>
           </li>
         
       </ul>
@@ -676,7 +764,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </aside>
 
@@ -685,7 +773,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Structure/" style="font-size: 10px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/index/" style="font-size: 10px;">index</a> <a href="/tags/structure/" style="font-size: 10px;">structure</a> <a href="/tags/using/" style="font-size: 20px;">using</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Structure/" style="font-size: 10px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/index/" style="font-size: 10px;">index</a> <a href="/tags/structure/" style="font-size: 10px;">structure</a> <a href="/tags/using/" style="font-size: 20px;">using</a>
     </div>
   </aside>
 
