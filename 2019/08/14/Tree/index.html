@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Li_zi_wei_blog">
 <meta property="og:description" content="树基础性质 一对多的关系，一个父亲有多个孩子。  层次性，递归定义。  边数=点数-1  树上两点之间路径唯一，不存在环。   术语 深度：选定根节点后，这棵树有几层。  节点的度：这个节点往外连了几条边。  子节点，父节点，兄弟节点  叶子节点：没有孩子的节点。   二叉树 每个节点最多只有两个子节点。  二叉树是一棵有序树，换而言之左儿子和右儿子一般而言是不能随便交换的。   1. 简单的小性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-14T08:03:13.558Z">
+<meta property="og:updated_time" content="2019-08-14T08:21:49.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tree">
 <meta name="twitter:description" content="树基础性质 一对多的关系，一个父亲有多个孩子。  层次性，递归定义。  边数=点数-1  树上两点之间路径唯一，不存在环。   术语 深度：选定根节点后，这棵树有几层。  节点的度：这个节点往外连了几条边。  子节点，父节点，兄弟节点  叶子节点：没有孩子的节点。   二叉树 每个节点最多只有两个子节点。  二叉树是一棵有序树，换而言之左儿子和右儿子一般而言是不能随便交换的。   1. 简单的小性">
@@ -83,7 +83,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/08/14/Tree/" data-id="cjzaywz55000f84tof9gb3d5r" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="http://lzwblog.tk/2019/08/14/Tree/" data-id="cjzazksps000ix0toqb13qigw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -130,7 +130,6 @@
 </li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[N];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	G[u].push_back(v);</span><br><span class="line">	G[v].push_back(u);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="3-解决的办法"><a href="#3-解决的办法" class="headerlink" title="3. 解决的办法"></a>3. 解决的办法</h3><ul>
 <li>开一个长度可变的数组(vector&lt;&gt;)，即开即用，这样就不容易造成空间浪费导致MLE了。</li>
 </ul>
@@ -272,5 +271,20 @@
 <div id="bg"></div>
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
