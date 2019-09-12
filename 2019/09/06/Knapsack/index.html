@@ -15,20 +15,20 @@
   
   <title>Knapsack背包 | Li_zi_wei_blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢) 01背包完全背包多重背包混合背包二维费用背包 分组背包 有依赖背包搜索法做背包 01背包 题目有N件物品和一个容量为m的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。 题解01背包">
-<meta name="keywords" content="algorithm">
+  <meta name="description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
+<meta name="keywords" content="Algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Knapsack背包">
 <meta property="og:url" content="https://lzwblog.tk/2019/09/06/Knapsack/index.html">
 <meta property="og:site_name" content="Li_zi_wei_blog">
-<meta property="og:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢) 01背包完全背包多重背包混合背包二维费用背包 分组背包 有依赖背包搜索法做背包 01背包 题目有N件物品和一个容量为m的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。 题解01背包">
+<meta property="og:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://hi.csdn.net/attachment/201111/26/1828304_1322294848QzY3.gif">
 <meta property="og:image" content="http://hi.csdn.net/attachment/201111/26/1828304_13222948482PZ5.gif">
-<meta property="og:updated_time" content="2019-09-06T11:55:45.465Z">
+<meta property="og:updated_time" content="2019-09-12T12:26:10.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Knapsack背包">
-<meta name="twitter:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢) 01背包完全背包多重背包混合背包二维费用背包 分组背包 有依赖背包搜索法做背包 01背包 题目有N件物品和一个容量为m的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。 题解01背包">
+<meta name="twitter:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
 <meta name="twitter:image" content="http://hi.csdn.net/attachment/201111/26/1828304_1322294848QzY3.gif">
   
   
@@ -86,13 +86,14 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/09/06/Knapsack/" data-id="ck09c2nvx000818ton6n3oemf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/09/06/Knapsack/" data-id="ck0go79h500057wto3pw2fa1z" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
     <div class="entry-content">
       
-        <h2 id="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679"><a href="#特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679" class="headerlink" title="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679"></a>特别申明：此篇源自于<a href="https://www.kancloud.cn/kancloud/pack/70125" target="_blank" rel="noopener">背包问题九讲</a><a href="https://blog.csdn.net/wumuzi520/article/details/7014830" target="_blank" rel="noopener">CSDN博主「wumuzi」的原创文章</a>如有侵权 请联系QQ3155744679</h2><p>为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢)</p>
+        <h2 id="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679"><a href="#特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679" class="headerlink" title="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679"></a>特别申明：此篇源自于<a href="https://www.kancloud.cn/kancloud/pack/70125" target="_blank" rel="noopener">背包问题九讲</a><a href="https://blog.csdn.net/wumuzi520/article/details/7014830" target="_blank" rel="noopener">CSDN博主「wumuzi」的原创文章</a>如有侵权 请联系QQ3155744679</h2><a id="more"></a>
+<p>为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢)</p>
 <p><a href="#01背包">01背包</a><br><a href="#完全背包">完全背包</a><br><a href="#多重背包">多重背包</a><br><a href="#混合背包">混合背包</a><br><a href="#二维费用背包 分组背包 有依赖背包">二维费用背包 分组背包 有依赖背包</a><br><a href="#搜索">搜索法做背包</a></p>
 <p><a name="01背包">01背包</a></p>
 <h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p><code>有N件物品和一个容量为m的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。</code></p>
@@ -155,7 +156,7 @@
     
     
   <span class="article-delim">&#8226;</span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
 
     </footer>
 </article>
@@ -227,7 +228,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </aside>
 
@@ -236,7 +237,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/Structure/" style="font-size: 20px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/index/" style="font-size: 20px;">index</a> <a href="/tags/structure/" style="font-size: 10px;">structure</a> <a href="/tags/using/" style="font-size: 20px;">using</a>
+      <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/Structure/" style="font-size: 20px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/index/" style="font-size: 15px;">index</a> <a href="/tags/using/" style="font-size: 15px;">using</a>
     </div>
   </aside>
 
