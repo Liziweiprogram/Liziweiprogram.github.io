@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png">
 <meta property="og:image" content="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png">
 <meta property="og:image" content="https://i.loli.net/2019/09/13/r2bSUkHzoVXPfgl.png">
-<meta property="og:updated_time" content="2019-09-13T03:33:35.122Z">
+<meta property="og:updated_time" content="2019-09-13T03:36:31.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bitwise Operation 位运算">
 <meta name="twitter:description" content="虽然考纲里貌似没有提到位运算但我还是看一下ba">
@@ -88,7 +88,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/09/13/Bitwise_Operation/" data-id="ck0hkhu0n0005lstokbyo0l4i" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/09/13/Bitwise_Operation/" data-id="ck0hklis00003wgto2d8c019u" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -109,40 +109,68 @@
 <p>1&amp;0=0</p>
 <p>0&amp;0=0</p>
 <p><img src="https://i.loli.net/2019/09/13/G2BsdMPKxIN3p17.png" alt="MC中的&amp;"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">&amp;00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 00010($2_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p> 11010($26_{10}$)</p>
+<p>&amp;00010($2_{10}$)</p>
+<hr>
+<p> 00010($2_{10}$)</p>
 <p><a name="按位或">按位或</a></p>
 <h2 id="按位或-or"><a href="#按位或-or" class="headerlink" title="按位或 or |"></a>按位或 or |</h2><p>当两个二进制的数的同一位至少1个为1 则为1 否则为0</p>
 <p>1|1=1</p>
 <p>1|0=1</p>
 <p>0|0=0</p>
 <p><img src="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png" alt="MC中的|"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">|00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 11010($26_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p> 11010($26_{10}$)</p>
+<p>|00010($2_{10}$)</p>
+<hr>
+<p> 11010($26_{10}$)</p>
 <p><a name="按位异或">按位异或</a></p>
 <h2 id="按位异或-xor"><a href="#按位异或-xor" class="headerlink" title="按位异或 xor ^"></a>按位异或 xor ^</h2><p>当两个二进制的数的同一位1个为1一个为0 则为1 否则为0</p>
 <p>1^1=0</p>
 <p>1^0=1</p>
 <p>0^0=0</p>
 <p><img src="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png" alt="MC中的^"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">^00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 11000($24_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p> 11010($26_{10}$)</p>
+<p>^00010($2_{10}$)</p>
+<hr>
+<p> 11000($24_{10}$)</p>
 <p><a name="按位取反">按位取反</a></p>
 <h2 id="按位取反-not"><a href="#按位取反-not" class="headerlink" title="按位取反 not ~"></a>按位取反 not ~</h2><p>把二进制数每一位是1改为0 是0改为1</p>
 <p>~ 1=0</p>
 <p>~ 0=1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~11010($26_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 00101($5_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p>~ 11010($26_{10}$)</p>
+<hr>
+<p>  00101($5_{10}$)</p>
 <p><img src="https://i.loli.net/2019/09/13/r2bSUkHzoVXPfgl.png" alt="MC中的not"></p>
 <p><a name="左移">左移</a></p>
 <p><del>万能的MC终于有一时半会弄不出的东西了</del></p>
 <h2 id="左移-shl-lt-lt"><a href="#左移-shl-lt-lt" class="headerlink" title="左移 shl &lt;&lt;"></a>左移 shl &lt;&lt;</h2><p>a shl b的意思是把a转为二进制后左移b位</p>
 <p>实际上 a shl b == a * $2^{b}$</p>
 <p>但是 shl 运算会比直接 * 快一些</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11010($26_&#123;10&#125;$)</span><br><span class="line">&lt;&lt;1</span><br><span class="line">_______</span><br><span class="line"> 110100($52_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p>  11010($26_{10}$)</p>
+<p>&lt;&lt;1</p>
+<hr>
+<p> 110100($52_{10}$)</p>
 <p><a name="右移">右移</a></p>
 <h2 id="右移-shr-gt-gt"><a href="#右移-shr-gt-gt" class="headerlink" title="右移 shr &gt;&gt;"></a>右移 shr &gt;&gt;</h2><p>a shr b的意思是把a转为二进制后右移b位</p>
 <p>实际上 a shr b == a / $2^{b}$</p>
 <p>但是 shr 运算会比直接 / 或者 % 快很多(?)</p>
 <p>(据说求最大公约数用shr(&gt;&gt;)代替mod(%)效率提高60%)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11010($26_&#123;10&#125;$)</span><br><span class="line">&gt;&gt;1</span><br><span class="line">_______</span><br><span class="line">   1101($13_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11011($27_&#123;10&#125;$)</span><br><span class="line">&gt;&gt;1</span><br><span class="line">_______</span><br><span class="line">   1101($13_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p>  11010($26_{10}$)</p>
+<blockquote>
+<blockquote>
+<p>1</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>   1101($13_{10}$)</p>
+<p>  11011($27_{10}$)</p>
+<blockquote>
+<blockquote>
+<p>1</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>   1101($13_{10}$)</p>
 
       
     </div><!-- .entry-content -->
