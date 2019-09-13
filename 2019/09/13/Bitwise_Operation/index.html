@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Bitwise Operation 位运算 | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="虽然考纲里貌似没有提到位运算但我还是看一下ba">
+<meta name="keywords" content="CSP-J">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bitwise Operation 位运算">
+<meta property="og:url" content="https://lzwblog.tk/2019/09/13/Bitwise_Operation/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="虽然考纲里貌似没有提到位运算但我还是看一下ba">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/09/13/G2BsdMPKxIN3p17.png">
+<meta property="og:image" content="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png">
+<meta property="og:image" content="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png">
+<meta property="og:image" content="https://i.loli.net/2019/09/13/r2bSUkHzoVXPfgl.png">
+<meta property="og:updated_time" content="2019-09-13T03:31:20.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bitwise Operation 位运算">
+<meta name="twitter:description" content="虽然考纲里貌似没有提到位运算但我还是看一下ba">
+<meta name="twitter:image" content="https://i.loli.net/2019/09/13/G2BsdMPKxIN3p17.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Bitwise_Operation" class="post-Bitwise_Operation post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Bitwise Operation 位运算
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/09/13/Bitwise_Operation/" data-id="ck0hkgbq00002mgtoeiolu2pw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>虽然考纲里貌似没有提到位运算但我还是看一下ba</p>
+<a id="more"></a>
+<p>为了防止你们懒得看多余的我弄个传送门吧</p>
+<p><a href="#按位与">按位与</a><br><a href="#按位或">按位或</a><br><a href="#按位异或">按位异或</a><br><a href="#按位取反">按位取反</a><br><a href="#左移">左移</a><br><a href="#右移">右移</a></p>
+<p>P.S:本文涉及MC图片中 拉杆(位于蓝色混泥土上)为输入(拉下为1 不拉为0)</p>
+<p>红石(位于红色混泥土上)为输出(亮为1 不亮为0)</p>
+<p>白色混泥土充当方块</p>
+<p>使用MC完成位运算灵感来源<a href="https://luckyfuy.cf/2019/04/12/Redstone-Circuits/#more" target="_blank" rel="noopener">Luckyfuy搬运MC红石位运算</a></p>
+<p>所有红石电路在最新版(2019.09.13时)网易MC可以正常运行</p>
+<p><a name="按位与">按位与</a></p>
+<h2 id="按位与-and-amp"><a href="#按位与-and-amp" class="headerlink" title="按位与 and &amp;"></a>按位与 and &amp;</h2><p>当两个二进制的数的同一位都是1 则为1 否则为0</p>
+<p>1&amp;1=1<br>1&amp;0=0<br>0&amp;0=0</p>
+<p><img src="https://i.loli.net/2019/09/13/G2BsdMPKxIN3p17.png" alt="MC中的&amp;"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">&amp;00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 00010($2_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p><a name="按位或">按位或</a></p>
+<h2 id="按位或-or"><a href="#按位或-or" class="headerlink" title="按位或 or |"></a>按位或 or |</h2><p>当两个二进制的数的同一位至少1个为1 则为1 否则为0</p>
+<p>1|1=1<br>1|0=1<br>0|0=0</p>
+<p><img src="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png" alt="MC中的|"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">|00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 11010($26_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p><a name="按位异或">按位异或</a></p>
+<h2 id="按位异或-xor"><a href="#按位异或-xor" class="headerlink" title="按位异或 xor ^"></a>按位异或 xor ^</h2><p>当两个二进制的数的同一位1个为1一个为0 则为1 否则为0</p>
+<p>1^1=0<br>1^0=1<br>0^0=0</p>
+<p><img src="https://i.loli.net/2019/09/13/IjHAGknv6fpCcOE.png" alt="MC中的^"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> 11010($26_&#123;10&#125;$)</span><br><span class="line">^00010($2_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 11000($24_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p><a name="按位取反">按位取反</a></p>
+<h2 id="按位取反-not"><a href="#按位取反-not" class="headerlink" title="按位取反 not ~"></a>按位取反 not ~</h2><p>把二进制数每一位是1改为0 是0改为1</p>
+<p>~1=0<br>~0=1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~11010($26_&#123;10&#125;$)</span><br><span class="line">______</span><br><span class="line"> 00101($5_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/09/13/r2bSUkHzoVXPfgl.png" alt="MC中的not"></p>
+<p><a name="左移">左移</a></p>
+<p><del>万能的MC终于有一时半会弄不出的东西了</del></p>
+<h2 id="左移-shl-lt-lt"><a href="#左移-shl-lt-lt" class="headerlink" title="左移 shl &lt;&lt;"></a>左移 shl &lt;&lt;</h2><p>a shl b的意思是把a转为二进制后左移b位</p>
+<p>实际上 a shl b == a * $2^{b}$</p>
+<p>但是 shl 运算会比直接 * 快一些</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11010($26_&#123;10&#125;$)</span><br><span class="line">&lt;&lt;1</span><br><span class="line">_______</span><br><span class="line"> 110100($52_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<p><a name="右移">右移</a></p>
+<h2 id="右移-shr-gt-gt"><a href="#右移-shr-gt-gt" class="headerlink" title="右移 shr &gt;&gt;"></a>右移 shr &gt;&gt;</h2><p>a shr b的意思是把a转为二进制后右移b位</p>
+<p>实际上 a shr b == a / $2^{b}$</p>
+<p>但是 shr 运算会比直接 / 或者 % 快很多(?)</p>
+<p>(据说求最大公约数用shr(&gt;&gt;)代替mod(%)效率提高60%)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11010($26_&#123;10&#125;$)</span><br><span class="line">&gt;&gt;1</span><br><span class="line">_______</span><br><span class="line">   1101($13_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  11011($27_&#123;10&#125;$)</span><br><span class="line">&gt;&gt;1</span><br><span class="line">_______</span><br><span class="line">   1101($13_&#123;10&#125;$)</span><br></pre></td></tr></table></figure>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/09/13/Bitwise_Operation/">
+    <time datetime="2019-09-13T01:52:25.000Z" class="entry-date">
+        2019-09-13
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSP-J/">CSP-J</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/9102/07/03/Timeline/" rel="prev"><span class="meta-nav">←</span> Timeline</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/09/13/NOIp-PJ/" rel="next">NOIp-PJ <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/13/Bitwise_Operation/">Bitwise Operation 位运算</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/13/NOIp-PJ/">NOIp-PJ</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/06/Knapsack/">Knapsack背包</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP-J/">CSP-J</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/CSP-J/" style="font-size: 20px;">CSP-J</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/Structure/" style="font-size: 16.67px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/index/" style="font-size: 16.67px;">index</a> <a href="/tags/using/" style="font-size: 13.33px;">using</a>
+    </div>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
