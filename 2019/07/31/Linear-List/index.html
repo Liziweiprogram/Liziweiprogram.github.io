@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Li_zi_wei_blog">
 <meta property="og:description" content="线性表结构特点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-13T01:20:52.675Z">
+<meta property="og:updated_time" content="2019-10-03T06:42:39.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linear-List">
 <meta name="twitter:description" content="线性表结构特点">
@@ -83,7 +83,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/07/31/Linear-List/" data-id="ck1a53hrx0003t8tovrvlxnt3" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/07/31/Linear-List/" data-id="ck1bunq05000jgkto5q7te9va" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -106,6 +106,7 @@
 <h3 id="队列-先进先出"><a href="#队列-先进先出" class="headerlink" title="队列(先进先出)"></a>队列(先进先出)</h3><p><strong>队列(queue) : FIFO(First in first out)表.</strong></p>
 <p>实现队列</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//手写(空间占用大)</span><br><span class="line">int s[100005],fnt,end;</span><br><span class="line">#define push(x) s[++end]=x</span><br><span class="line">#define pop fnt++</span><br><span class="line">#define front s[fnt]</span><br><span class="line">#define size end-fnt++</span><br><span class="line"></span><br><span class="line">//直接使用函数</span><br><span class="line">#include &lt;deque&gt;</span><br><span class="line"></span><br><span class="line">deque &lt;int&gt; d;</span><br><span class="line"></span><br><span class="line">d.push_front() //在队列开始处增加一个元素</span><br><span class="line">d.push_back() //在队列结尾处增加一个元素</span><br><span class="line">d.pop_front() //在队列开始处弹走一个元素</span><br><span class="line">d.pop_back() //在队列结尾处弹走一个元素</span><br><span class="line"></span><br><span class="line">d.front() //输出队列开始处的元素</span><br><span class="line">d.back() //输出队列结尾处的元素</span><br></pre></td></tr></table></figure>
+<h4 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;queue&gt;</span><br><span class="line">大根堆priority_queue&lt;int&gt; pq;</span><br><span class="line">小根堆priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt;&gt; pq;</span><br><span class="line">入堆：pq.push()</span><br><span class="line">堆顶：pq.top()</span><br></pre></td></tr></table></figure>
 <h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p><strong>链表(Linked List)：相邻元素相连接</strong></p>
 <h4 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">int Linked_List[1010];</span><br><span class="line">int tot = 0;</span><br><span class="line"></span><br><span class="line">int push(int x,int p)//任意插入</span><br><span class="line">&#123;</span><br><span class="line">	tot ++;</span><br><span class="line">	for (int i = tot;i &gt;= p;i --)</span><br><span class="line">	&#123;</span><br><span class="line">		Linked_List[i] = Linked_List[i - 1];</span><br><span class="line">	&#125;</span><br><span class="line">	Linked_List[p] = x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int inquire_next(int p)</span><br><span class="line">&#123;</span><br><span class="line">	if(p == tot) cout &lt;&lt; Linked_List[1] &lt;&lt; endl;</span><br><span class="line">	else cout &lt;&lt; Linked_List[p + 1] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int inquire_last(int p)</span><br><span class="line">&#123;</span><br><span class="line">	if(p == 1) cout &lt;&lt; Linked_List[tot] &lt;&lt; endl;</span><br><span class="line">	else cout &lt;&lt; Linked_List[p - 1] &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//这么诡异的代码肯定是Li_zi_wei写的qwq</span><br></pre></td></tr></table></figure>
 
@@ -173,15 +174,15 @@
           </li>
         
           <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/01/Luogu_Class_Autumn/">Luogu_Class_Autumn</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/20/Undertale/">Undertale</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/13/Preliminary_in_Informology/">Preliminary_in_Informology 信息学奥赛初赛</a>
           </li>
         
       </ul>
@@ -193,7 +194,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP-J/">CSP-J</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PTOJ/">PTOJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undertale/">Undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP-J/">CSP-J</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PTOJ/">PTOJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undertale/">Undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Using/">Using</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </aside>
 
@@ -202,7 +203,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 16px;">Algorithm</a> <a href="/tags/CSP-J/" style="font-size: 20px;">CSP-J</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/PTOJ/" style="font-size: 10px;">PTOJ</a> <a href="/tags/Structure/" style="font-size: 18px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/Undertale/" style="font-size: 10px;">Undertale</a> <a href="/tags/game/" style="font-size: 12px;">game</a> <a href="/tags/index/" style="font-size: 14px;">index</a> <a href="/tags/using/" style="font-size: 12px;">using</a>
+      <a href="/tags/Algorithm/" style="font-size: 16px;">Algorithm</a> <a href="/tags/CSP-J/" style="font-size: 20px;">CSP-J</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/PTOJ/" style="font-size: 10px;">PTOJ</a> <a href="/tags/Structure/" style="font-size: 18px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/Undertale/" style="font-size: 10px;">Undertale</a> <a href="/tags/Using/" style="font-size: 10px;">Using</a> <a href="/tags/game/" style="font-size: 12px;">game</a> <a href="/tags/index/" style="font-size: 14px;">index</a> <a href="/tags/using/" style="font-size: 12px;">using</a>
     </div>
   </aside>
 
@@ -230,20 +231,5 @@
 <div id="bg"></div>
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

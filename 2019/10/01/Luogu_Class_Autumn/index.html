@@ -16,14 +16,14 @@
   <title>Luogu_Class_Autumn | Li_zi_wei_blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="洛谷网校秋季课程">
-<meta name="keywords" content="CSP-J,Structure,Algorithm">
+<meta name="keywords" content="CSP-J,Algorithm,Structure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Luogu_Class_Autumn">
 <meta property="og:url" content="https://lzwblog.tk/2019/10/01/Luogu_Class_Autumn/index.html">
 <meta property="og:site_name" content="Li_zi_wei_blog">
 <meta property="og:description" content="洛谷网校秋季课程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-03T03:18:55.685Z">
+<meta property="og:updated_time" content="2019-10-03T10:29:46.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luogu_Class_Autumn">
 <meta name="twitter:description" content="洛谷网校秋季课程">
@@ -83,7 +83,7 @@
         
         <div class="comments-link">
             
-            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/10/01/Luogu_Class_Autumn/" data-id="ck1a53hrz0005t8tolsytmn0f" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+            <a href="javascript:void(0);" data-url="https://lzwblog.tk/2019/10/01/Luogu_Class_Autumn/" data-id="ck1bunq0e000wgktowa6lgqg1" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
         </div><!-- .comments-link -->
       </header><!-- .entry-header -->
 
@@ -150,8 +150,32 @@
 <li>128MB可以存 3.2e7 个 int</li>
 <li>千万别考虑开设一个 <code>a[100000][100000]</code> 这样的二维数组。</li>
 </ul>
-<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><a href="https://lzwblog.tk/2019/07/31/Linear-List/">线性表</a></h3><p>哦对 还有一个动态数组[vector]</p>
-
+<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><a href="https://lzwblog.tk/2019/07/31/Linear-List/">线性表</a></h3><p>哦对 还有一个动态数组<a href="https://lzwblog.tk/2019/07/27/Vector/">vector</a></p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><ul>
+<li>union(x,y)：将x和y合并</li>
+<li>find(x)==find(y)：判断是否是同一个祖先</li>
+</ul>
+<h4 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string,int&gt; ds; 新建map</span><br><span class="line">ds[“hello”]=100; 修改对应的值</span><br><span class="line">ds[“hello”]; 访问</span><br><span class="line">ds.find(“hello”); 判断是否存在</span><br></pre></td></tr></table></figure>
+<h2 id="Day-3-基础动态规划选讲"><a href="#Day-3-基础动态规划选讲" class="headerlink" title="Day.3 基础动态规划选讲"></a>Day.3 基础动态规划选讲</h2><h3 id="dp前提"><a href="#dp前提" class="headerlink" title="dp前提"></a>dp前提</h3><ul>
+<li>大问题可以拆成一些小问题</li>
+</ul>
+<p>典型反例：有环的图上不能跑DAG最短路算法来求最短路</p>
+<ul>
+<li>最优子结构性质</li>
+<li>大问题的最优解必须是从小问题的最优解（而不是其他垃圾解）推出来的。</li>
+<li>无后效性</li>
+<li>一个状态的决策，只与过去的结果有关，而与过去的决策无关</li>
+</ul>
+<h3 id="dp三连"><a href="#dp三连" class="headerlink" title="dp三连"></a>dp三连</h3><ul>
+<li>我是谁？            - 把(实际)局面表达为(数学)状态</li>
+<li>我从哪里来？        - 设计pull型的转移</li>
+<li>我到哪里去？        - 设计push型的转移</li>
+</ul>
+<p><strong>DP的过程，实际上就是在DAG上依次求出每个节点的value</strong></p>
+<p><code>总结一句：大事化小，小事化了。</code></p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>DP有两种实现方式：按顺序递推 &amp; 记忆化搜索</p>
+<p>前者多用于push型的转移，后者多用于pull型的转移。</p>
+<h3 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h3>
       
     </div><!-- .entry-content -->
 
@@ -174,7 +198,7 @@
 <nav class="nav-single">
     <h3 class="assistive-text">文章导航</h3>
     
-        <span class="nav-previous"><a href="/9102/07/03/Timeline/" rel="prev"><span class="meta-nav">←</span> Timeline</a></span>
+        <span class="nav-previous"><a href="/2019/10/04/Template/" rel="prev"><span class="meta-nav">←</span> Template</a></span>
     
     
         <span class="nav-next"><a href="/2019/09/20/Undertale/" rel="next">Undertale <span class="meta-nav">→</span></a></span>
@@ -216,15 +240,15 @@
           </li>
         
           <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/01/Luogu_Class_Autumn/">Luogu_Class_Autumn</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/20/Undertale/">Undertale</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/13/Preliminary_in_Informology/">Preliminary_in_Informology 信息学奥赛初赛</a>
           </li>
         
       </ul>
@@ -236,7 +260,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tags</h3>
     <div class="widget-content">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP-J/">CSP-J</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PTOJ/">PTOJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undertale/">Undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSP-J/">CSP-J</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PTOJ/">PTOJ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Structure/">Structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Timeline/">Timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undertale/">Undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Using/">Using</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </aside>
 
@@ -245,7 +269,7 @@
   <aside class="widget">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget-content tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 16px;">Algorithm</a> <a href="/tags/CSP-J/" style="font-size: 20px;">CSP-J</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/PTOJ/" style="font-size: 10px;">PTOJ</a> <a href="/tags/Structure/" style="font-size: 18px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/Undertale/" style="font-size: 10px;">Undertale</a> <a href="/tags/game/" style="font-size: 12px;">game</a> <a href="/tags/index/" style="font-size: 14px;">index</a> <a href="/tags/using/" style="font-size: 12px;">using</a>
+      <a href="/tags/Algorithm/" style="font-size: 16px;">Algorithm</a> <a href="/tags/CSP-J/" style="font-size: 20px;">CSP-J</a> <a href="/tags/Minecraft/" style="font-size: 10px;">Minecraft</a> <a href="/tags/PTOJ/" style="font-size: 10px;">PTOJ</a> <a href="/tags/Structure/" style="font-size: 18px;">Structure</a> <a href="/tags/Timeline/" style="font-size: 10px;">Timeline</a> <a href="/tags/Undertale/" style="font-size: 10px;">Undertale</a> <a href="/tags/Using/" style="font-size: 10px;">Using</a> <a href="/tags/game/" style="font-size: 12px;">game</a> <a href="/tags/index/" style="font-size: 14px;">index</a> <a href="/tags/using/" style="font-size: 12px;">using</a>
     </div>
   </aside>
 
@@ -273,20 +297,5 @@
 <div id="bg"></div>
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
