@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Knapsack背包 | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
+<meta name="keywords" content="csp-j,algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Knapsack背包">
+<meta property="og:url" content="https://lzwblog.xyz/2019/09/06/Knapsack/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201111/26/1828304_1322294848QzY3.gif">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201111/26/1828304_13222948482PZ5.gif">
+<meta property="og:updated_time" content="2019-10-11T14:11:36.050Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Knapsack背包">
+<meta name="twitter:description" content="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679">
+<meta name="twitter:image" content="http://hi.csdn.net/attachment/201111/26/1828304_1322294848QzY3.gif">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/2019/10/11/Blog_news/">Blog_news</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Knapsack" class="post-Knapsack post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Knapsack背包
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.xyz/2019/09/06/Knapsack/" data-id="ck1m94egf000e10to9yy0tga1" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679"><a href="#特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权-请联系QQ3155744679" class="headerlink" title="特别申明：此篇源自于背包问题九讲CSDN博主「wumuzi」的原创文章如有侵权 请联系QQ3155744679"></a>特别申明：此篇源自于<a href="https://www.kancloud.cn/kancloud/pack/70125" target="_blank" rel="noopener">背包问题九讲</a><a href="https://blog.csdn.net/wumuzi520/article/details/7014830" target="_blank" rel="noopener">CSDN博主「wumuzi」的原创文章</a>如有侵权 请联系QQ3155744679</h2><a id="more"></a>
+<p>为了防止你们懒得看多余的我弄个传送门吧(使用了新学的herf呢)</p>
+<p><a href="#01背包">01背包</a><br><a href="#完全背包">完全背包</a><br><a href="#多重背包">多重背包</a><br><a href="#混合背包">混合背包</a><br><a href="#二维费用背包 分组背包 有依赖背包">二维费用背包 分组背包 有依赖背包</a><br><a href="#搜索">搜索法做背包</a></p>
+<p><a name="01背包">01背包</a></p>
+<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p><code>有N件物品和一个容量为m的背包。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。</code></p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>01背包标准转移方程：</p>
+<blockquote>
+<p><code>f[i][j]=max(f[i-1][j],f[i-1][j-c[i]]+w[i]);</code>(空间O(MN))</p>
+</blockquote>
+<p>当然你也可以写成</p>
+<blockquote>
+<p><code>if(f[j-c[i]]+w[i]&gt;f[j]) f[j]=f[j-c[i]]+w[i];</code>(空间O(N))</p>
+</blockquote>
+<p>解析：将前i件物品放入容量为v的背包中”这个子问题，只考虑第i件物品，那么就转化为只牵扯前i-1件物品的问题。不放第i件，问题转化为$前i-1件物品放入容量为v的背包中$，价值为<code>f[i-1][c]</code>；放第i件，问题转化为“前i-1件物品放入容量为<code>m-c[i]</code>的背包中”，此时能获得的最大价值就是<code>f[i-1][m-c[i]]</code>加第i件物品获得的价值<code>w[i]</code>。</p>
+<h4 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">for(int i=1;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    for(int j=m;j&gt;=c[i];j--)</span><br><span class="line">    &#123;</span><br><span class="line">        if(f[j-c[i]]+w[i]&gt;f[j])</span><br><span class="line">        f[j]=f[j-c[i]]+w[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="完全背包">完全背包</a></p>
+<h4 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h4><p><code>有N件物品和一个容量为M的背包,每种物品都有无限件可用。第i件物品的费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使价值总和最大。</code></p>
+<h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><p>每种物品有无限件。也就是从每种物品的角度考虑，与它相关的策略已并非取或不取两种，而是有取0件、取1件、取2件……等很多种。如果按01背包做法复杂度达到O(M * Σ(M / c[i]))</p>
+<h5 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h5><p>若两件物品i、j满足c[i]≤c[j]&amp;&amp;w[i]≥w[j]，则将物品j去掉，不用考虑。这个优化可以简单的O(MN)地实现。</p>
+<h5 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h5><p>既然差不多,我们也可以转换成01背包求解。第i种物品最多可以选取m/c[i]件价值不变的物品，然后就转化为01背包问题。整个过程的时间复杂度并未减少。如果把第i种物品拆成体积为c[i] <em> 2k 价值w[i] </em> 2k的物品，(k满足c[i] * 2k ≤ m)。那么在求状态f[i][j]时复杂度就变为O($log2(M/C[i])$)。整个时间复杂度就变为O($NMlog2(M/c[i])$)</p>
+<h5 id="时间复杂度再次优化"><a href="#时间复杂度再次优化" class="headerlink" title="时间复杂度再次优化"></a>时间复杂度再次优化</h5><p>设<code>f[i][j]</code>表示出在前i种物品中选取若干件物品放入容量为j的背包所得的最大价值。那么对于第i种物品的出现，我们对第i种物品放不放入背包进行决策。如果不放那么<code>f[i][j]=f[i-1][j]</code>；如果放，背包中出现至少一件第i种物品，所以<code>f[i][j]</code>中应该出现一件第i种物品,即<code>f[i][j]=f[i][j-c[i]]+w[i]</code>。我们要确保<code>f[i][j]</code>至少有一件第i件物品，所以要预留<code>c[i]</code>的空间来存放一件第i种物品。</p>
+<p><img src="http://hi.csdn.net/attachment/201111/26/1828304_1322294848QzY3.gif" alt="某方程"></p>
+<h4 id="时间复杂度优化后代码"><a href="#时间复杂度优化后代码" class="headerlink" title="时间复杂度优化后代码"></a>时间复杂度优化后代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">&#123;</span><br><span class="line">	for (int j = 1;j &lt;= m;j ++)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i][j] = f[i - 1][j];</span><br><span class="line">		if(j &gt;= c[i]) f[i][j] = max(f[i][j],f[i][j - c[i]] + w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="优化空间复杂度"><a href="#优化空间复杂度" class="headerlink" title="优化空间复杂度"></a>优化空间复杂度</h5><p>完全背包也可以用一维数组来保存数据。唯一注意的是01为逆序，完全背包为顺序。</p>
+<blockquote>
+<p>01背包中逆序是因为<code>F[i][]</code>只和<code>F[i-1][]</code>有关，且第i件的物品加入不会对<code>F[i-1][]</code>状态造成影响。而完全背包则考虑的是第i种物品的出现的问题，第i种物品一旦出现它势必应该对第i种物品还没出现的各状态造成影响。</p>
+</blockquote>
+<p><img src="http://hi.csdn.net/attachment/201111/26/1828304_13222948482PZ5.gif" alt="某方程2"></p>
+<h4 id="空间复杂度优化后代码"><a href="#空间复杂度优化后代码" class="headerlink" title="空间复杂度优化后代码"></a>空间复杂度优化后代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">&#123;</span><br><span class="line">	for (int j = c[i];j &lt;= m;j ++)</span><br><span class="line">	&#123;</span><br><span class="line">		f[j] = max(f[j],f[j - c[i]] + w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="多重背包">多重背包</a></p>
+<p>当你解决了前面两位,我猜PTOJ<code>Low</code>难度已经完全难不倒你了。</p>
+<h4 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h4><p>有N种物品和一个容量为m的背包。第i种物品最多有n[i]件可用，每件费用是c[i]，价值是w[i]。求解将哪些物品装入背包可使这些物品的费用总和不超过背包容量，且价值总和最大。</p>
+<h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><p>这似乎比完全背包问题”简单”一点点。本的方程只需将完全背包问题的方程略微一改即可，因为对于第i种物品有<code>n[i]+1</code>种策略：取0件，取1件……取n[i]件。</p>
+<p>转移方程为<code>f[i][j]=max(f[i][j],f[i - 1][j - k * c[i]] + k * w[i] |(0 &lt;= k &lt;= n[i]) )</code></p>
+<p>复杂度是<code>O(M * Σn[i])</code></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1; i &lt;= k; i++) //k是优化过后的物品总数量</span><br><span class="line">&#123;</span><br><span class="line">    for (int j = m; j &gt;= 1; j--) </span><br><span class="line">    &#123;</span><br><span class="line">        if (c[i] &lt;= j) f[j] = max(f[j], f[j - c[i]] + w[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="混合背包">混合背包</a></p>
+<p>没什么难的,只需要用<code>if-else语句把3个分开就可以了</code> 代码详见上面3位。</p>
+<p><a name="二维费用背包 分组背包 有依赖背包">二维费用背包 分组背包 有依赖背包</a></p>
+<p>因为个人认为不在普及(或者CSP-J?)范围内，因此这三位不作考虑(???)</p>
+<p>详见<a href="https://www.kancloud.cn/kancloud/pack/70129" target="_blank" rel="noopener">二维费用</a><a href="https://www.kancloud.cn/kancloud/pack/70130" target="_blank" rel="noopener">分组</a><a href="https://www.kancloud.cn/kancloud/pack/70131" target="_blank" rel="noopener">有依赖</a></p>
+<p><a name="搜索">搜索法做背包</a></p>
+<p>这个因为<del>篇幅</del>作者太蒟的原因指提出<strong>01背包</strong> <strong>dfs</strong>写法</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void Search(int i,int nv,int nw)</span><br><span class="line">    if(i&gt;N)</span><br><span class="line">        if(nw &gt; ans)</span><br><span class="line">            ans = nw;</span><br><span class="line">        return;</span><br><span class="line">    if(nv + v[i] &lt;= m)</span><br><span class="line">        Search(i + 1,nv + v[i],nw + w[i])</span><br><span class="line">    Search(i + 1,nv,nw)</span><br></pre></td></tr></table></figure>
+<h4 id="Search-DP"><a href="#Search-DP" class="headerlink" title="Search||DP?"></a>Search||DP?</h4><blockquote>
+<p>在看到一道背包问题时，应该用搜索还是动态规划呢？</p>
+<p>首先，可以从数据范围中得到命题人意图的线索。如果一个背包问题可以用DP解，M一定不能很大，否则O(MN)的算法无法承受，而一般的搜索解法都是仅与N有关，与M无关的。所以，M很大时（例如上百万），命题人的意图就应该是考察搜索。另一方面，N较大时（例如上百），命题人的意图就很有可能是考察动态规划了。</p>
+<p>另外，当想不出合适的动态规划算法时，就只能用搜索了。例如看到一个从未见过的背包中物品的限制条件，无法想出DP的方程，只好写搜索以谋求一定的分数了。</p>
+</blockquote>
+<p>注释：v[i]在此文中与c[i]意义相同</p>
+<p>如有疑问,请查看<a href="https://www.kancloud.cn/kancloud/pack/70124" target="_blank" rel="noopener">背包问题九讲</a>来确认</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/09/06/Knapsack/">
+    <time datetime="2019-09-06T09:00:01.000Z" class="entry-date">
+        2019-09-06
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/csp-j/">csp-j</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/09/13/NOIp-PJ/" rel="prev"><span class="meta-nav">←</span> NOIp-PJ</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/08/22/Wake-up_War/" rel="next">Wake_up_War <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/11/Blog_news/">Blog news 博客月报(爆)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">links</h3>
+    <div class="widget-content links">
+      <a href = "https://luckyfuy.top">luckyfuy's blog</a></br>
+      <a href = "https://slight.ink">Summer_Light blog</a></br>
+      <a href = "http://potatoj.com">Potato Online Judge</a></br>
+      <a href = "https://slight.ink/hfls-wiki/">HFLS-Wiki</a></br>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp-j/">csp-j</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/minecraft/">minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ptoj/">ptoj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/">timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undertale/">undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">contact_me</h3>
+    <div class="widget-content contact_me">
+      <a href = "https://www.luogu.org/space/show?uid=174590">Luogu</a></br>
+      <a href = "https://potatoj.com/user-home?username=li_zi_wei">Potato Online Juge</a></br>
+      <a href = "https://space.bilibili.com/392655749">Bilibili</a></br>
+      <a href = "https://user.qzone.qq.com/3155744679">QQ</a></br>
+    </div>
+      <a href = "https://github.com/Liziweiprogram">gayhub</a>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

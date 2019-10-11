@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Luogu_Class_Autumn | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="洛谷网校秋季课程">
+<meta name="keywords" content="csp-j,algorithm,structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Luogu_Class_Autumn">
+<meta property="og:url" content="https://lzwblog.xyz/2019/10/01/Luogu_Class_Autumn/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="洛谷网校秋季课程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-11T14:11:02.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Luogu_Class_Autumn">
+<meta name="twitter:description" content="洛谷网校秋季课程">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/2019/10/11/Blog_news/">Blog_news</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Luogu_Class_Autumn" class="post-Luogu_Class_Autumn post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Luogu_Class_Autumn
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.xyz/2019/10/01/Luogu_Class_Autumn/" data-id="ck1m94egg000g10tol07r9r30" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="洛谷网校秋季课程"><a href="#洛谷网校秋季课程" class="headerlink" title="洛谷网校秋季课程"></a>洛谷网校秋季课程</h2><a id="more"></a>
+<h2 id="Day-1-图论"><a href="#Day-1-图论" class="headerlink" title="Day.1 图论"></a>Day.1 图论</h2><p>BFS</p>
+<ul>
+<li>可以求最短路</li>
+</ul>
+<p>BFS搜图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">deque Q</span><br><span class="line">Q.push_back(v);</span><br><span class="line">Q.push_front(v);</span><br><span class="line">Q.front();</span><br><span class="line">Q.pop_front();</span><br><span class="line"></span><br><span class="line">Dist[N]</span><br><span class="line">done[N]</span><br><span class="line"></span><br><span class="line">while() </span><br><span class="line">&#123;</span><br><span class="line">	u = Q.front();</span><br><span class="line">	if (done[u])</span><br><span class="line">		continue;</span><br><span class="line">	done[u] = 1;</span><br><span class="line">	for (v;v &lt;= u;v ++)</span><br><span class="line">		if (!done[v])</span><br><span class="line">		&#123;</span><br><span class="line">			//w is weight of edge (u, v)</span><br><span class="line">			Dist[v] = min(Dist[u] + w,Dist[v]);</span><br><span class="line">			if (w == 1)</span><br><span class="line">				Q.push_back(v);</span><br><span class="line">			else</span><br><span class="line">				Q.push_front(v);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="无根树"><a href="#无根树" class="headerlink" title="无根树"></a>无根树</h3><ul>
+<li>|E|=|V|-1</li>
+<li>无环</li>
+<li>联通</li>
+</ul>
+<p>做法：DFS/BFS 有根树做法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void dfs(int u, int fa)//u&apos;s father = fa</span><br><span class="line">&#123;</span><br><span class="line">	for (v is beside u)</span><br><span class="line">		if (v != fa)</span><br><span class="line">			dfs(v, u);//&lt;u -&gt; v&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="染色"><a href="#染色" class="headerlink" title="染色"></a>染色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Colour[1 ~ N]</span><br><span class="line">//Colour[u] : </span><br><span class="line">//0 : do not know at present</span><br><span class="line">//+1 : black</span><br><span class="line">//-1 : white</span><br><span class="line">bool dfs(int u)</span><br><span class="line">&#123;</span><br><span class="line">	//Colour[u] != 0</span><br><span class="line">	for (v is beside u)</span><br><span class="line">		if (Colour[v] == 0)</span><br><span class="line">		&#123;</span><br><span class="line">			Colour[v] = -Colour[u];</span><br><span class="line">			if (dfs(v) == false)</span><br><span class="line">				return false;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">			if (Colour[v] == Colour[u])</span><br><span class="line">				return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//dfs(u) returns:</span><br><span class="line">//true : colour successfully</span><br><span class="line">//false : failed</span><br><span class="line"></span><br><span class="line">for (u = 1 ~ N)</span><br><span class="line">	if (Color[u] == 0)</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Dist[<span class="number">1</span> ~ N]</span><br><span class="line">F[<span class="number">1</span> ~ N]</span><br><span class="line"></span><br><span class="line">relax(s, t, w)<span class="comment">//&lt;s -&gt; t&gt; w</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (Dist[t] &gt; Dist[s] + w)</span><br><span class="line">	&#123;</span><br><span class="line">		Dist[t] = Dist[s] + w</span><br><span class="line">		F[t] = F[s]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">if</span> (Dist[t] == Dist[s] + w)</span><br><span class="line">			F[t] += F[s]</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			;</span><br><span class="line">			<span class="comment">//Dist[t] &lt; Dist[s] + w</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (k = <span class="number">1</span> ~ N)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span> ~ k - <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span> ~ k - <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">if</span> (i != j)</span><br><span class="line">				Ans min= G[k][i] + Dist[i][j] + G[j][k]</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span> ~ N)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span> ~ N)</span><br><span class="line">			Dist[i][j] min= Dist[i][k] + Dist[k][j]</span><br><span class="line">	<span class="comment">//Dist[i][j]    k</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">queue</span> Q</span><br><span class="line"><span class="keyword">for</span> (u = <span class="number">1</span> ~ N)</span><br><span class="line">	<span class="keyword">if</span> (In[u] == <span class="number">0</span>)</span><br><span class="line">		Q.push(u)</span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">&#123;</span><br><span class="line">	u = Q.front(), Q.pop();</span><br><span class="line">	M = M + <span class="number">1</span>, P[M] = u;</span><br><span class="line">	<span class="keyword">for</span> (u can go to v)</span><br><span class="line">	&#123;</span><br><span class="line">		In[v] -= <span class="number">1</span></span><br><span class="line">		<span class="comment">//update(u, v)</span></span><br><span class="line">		<span class="keyword">if</span> (In[v] == <span class="number">0</span>)</span><br><span class="line">			Q.push(v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P[<span class="number">1</span> ~ N] : the result of toposort</span><br></pre></td></tr></table></figure>
+<h2 id="Day-2-数据结构"><a href="#Day-2-数据结构" class="headerlink" title="Day.2 数据结构"></a>Day.2 数据结构</h2><p><a href="https://lzwblog.xyz/2019/08/14/Tree/">树</a></p>
+<ul>
+<li>如何评价算法（时间复杂度）</li>
+<li><p><a href="https://lzwblog.xyz/2019/07/31/Linear-List/">线性表</a></p>
+<pre><code>数组，队列，栈，链表
+</code></pre></li>
+<li><p>优先队列</p>
+</li>
+<li><p>集合</p>
+<pre><code>并查集，哈希表
+</code></pre></li>
+</ul>
+<h3 id="评价算法-时间复杂度O-空间复杂度O"><a href="#评价算法-时间复杂度O-空间复杂度O" class="headerlink" title="评价算法(时间复杂度O(?)空间复杂度O(?))"></a>评价算法(时间复杂度O(?)空间复杂度O(?))</h3><ul>
+<li>代码可实现(!CE)(!UKE)</li>
+<li>结果正确(!WA)(!OLE)(!PC)</li>
+<li>能在限定的时间内运行完毕(!TLE)</li>
+<li>不超过内存等资源限制(!MLE)</li>
+</ul>
+<h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><ul>
+<li>程序在写出来之前是无法准确估计实际运行时间</li>
+<li>几乎所有算法竞赛的任务都会告知输入数据的规模和运行时间限制</li>
+<li>事先估计能否在限定的时间内运行完程序。</li>
+</ul>
+<p><strong>P.S:Windows可以看资源管理器</strong></p>
+<p>参考值 <strong>10e8(1e9) 每秒</strong></p>
+<h5 id="常数优化"><a href="#常数优化" class="headerlink" title="常数优化"></a>常数优化</h5><p>当数据范围没那么大时，精心优化高复杂度的算法，使其常数降低，可能运行速度比具有大常数的低复杂度算法更快。</p>
+<p>cin速度很慢，使用快速读入<br>cout还是很慢,用快写输出</p>
+<p>一些玄学题目在有了常数优化后可以玄学AC</p>
+<p>比如——</p>
+<p><strong><a href="https://www.luogu.org/problem/P3939" target="_blank" rel="noopener">洛谷P3939数颜色</a></strong></p>
+<p>看完题目你知道<strong>暴力40分</strong></p>
+<p>但是<code>lower_bound和upper_bound</code>不用吗?</p>
+<p>于是 你写出来这样的东西<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">//P3939</span><br><span class="line">//考察lower_bound和upper_bound的使用??? </span><br><span class="line">//听说暴力只有40qwq </span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[300010];</span><br><span class="line">vector &lt;int &gt; b[300010];</span><br><span class="line">int n,m;</span><br><span class="line">int t,l,r,c,x;</span><br><span class="line">int t1,t2;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		b[a[i]].push_back(i); </span><br><span class="line">	&#125;</span><br><span class="line">	for (int i = 1;i &lt;= m;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; t;</span><br><span class="line">		if(t == 1)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; l &gt;&gt; r &gt;&gt; c;</span><br><span class="line">			t1 = lower_bound(b[c].begin(), b[c].end(),l) - b[c].begin();</span><br><span class="line">			t2 = upper_bound(b[c].begin(), b[c].end(),r) - b[c].begin() - 1;</span><br><span class="line">			if(t2 - t1 &gt;= 0) cout &lt;&lt; t2 - t1 + 1 &lt;&lt; endl;</span><br><span class="line">			else cout &lt;&lt; 0 &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (t == 2)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; x;</span><br><span class="line">			if(a[x] != a[x + 1])</span><br><span class="line">			&#123;</span><br><span class="line">				t1 = lower_bound(b[a[x]].begin(),b[a[x]].end(),x) - b[a[x]].begin();</span><br><span class="line">				t2 = lower_bound(b[a[x + 1]].begin(),b[a[x + 1]].end(),x + 1) - b[a[x + 1]].begin();</span><br><span class="line">				b[a[x]][t1] ++;</span><br><span class="line">				b[a[x + 1]][t2] --;</span><br><span class="line">				swap(a[x],a[x + 1]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		/*</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">		for (int j = 1;j &lt;= n;j ++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; a[j] &lt;&lt; &quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">		*/</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>兴高采烈的提交得到了<a href="https://www.luogu.org/record/24601671" target="_blank" rel="noopener">70分</a></p>
+<p>去看一下std 就加了一个快读</p>
+<p>于是乎——</p>
+<p><a href="https://www.luogu.org/record/24602478" target="_blank" rel="noopener">AC</a></p>
+<p>留个快读快写模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">inline void read(int &amp;a) //快读</span><br><span class="line">&#123;</span><br><span class="line">    a = 0;</span><br><span class="line">    while (ch &lt; &apos;0&apos; || ch &gt; &apos;9&apos;) ch = getchar();</span><br><span class="line">    while (ch &gt;= &apos;0&apos; &amp;&amp; ch &lt;= &apos;9&apos;) a = a * 10 + ch - &apos;0&apos;, ch = getchar();</span><br><span class="line">&#125;</span><br><span class="line">inline void write(int x) //快写</span><br><span class="line">&#123;</span><br><span class="line">	if(!x)</span><br><span class="line">	&#123;	</span><br><span class="line">		putchar(&apos;0&apos;);</span><br><span class="line">		putchar(&apos;\n&apos;);</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	int cnt = 0;</span><br><span class="line"> 	while(x)</span><br><span class="line">	 &#123;</span><br><span class="line">	 	cnt ++;</span><br><span class="line">		buf[cnt] = (x % 10) + 48;</span><br><span class="line">		x /= 10;</span><br><span class="line">	 &#125;</span><br><span class="line">	while(cnt)</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(buf[cnt]);</span><br><span class="line">		cnt --; </span><br><span class="line">	&#125; </span><br><span class="line">	putchar(&apos;\n&apos;);//换不换行视题目而定</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><ul>
+<li>占用内存空间的大小，影响空间复杂度。</li>
+<li>128MB可以存 3.2e7 个 int</li>
+<li>千万别考虑开设一个 <code>a[100000][100000]</code> 这样的二维数组。</li>
+</ul>
+<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a><a href="https://lzwblog.xyz/2019/07/31/Linear-List/">线性表</a></h3><p>哦对 还有一个动态数组<a href="https://lzwblog.xyz/2019/07/27/Vector/">vector</a></p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><ul>
+<li>union(x,y)：将x和y合并</li>
+<li>find(x)==find(y)：判断是否是同一个祖先</li>
+</ul>
+<h4 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string,int&gt; ds; 新建map</span><br><span class="line">ds[“hello”]=100; 修改对应的值</span><br><span class="line">ds[“hello”]; 访问</span><br><span class="line">ds.find(“hello”); 判断是否存在</span><br></pre></td></tr></table></figure>
+<h2 id="Day-3-基础动态规划选讲"><a href="#Day-3-基础动态规划选讲" class="headerlink" title="Day.3 基础动态规划选讲"></a>Day.3 基础动态规划选讲</h2><h3 id="dp前提"><a href="#dp前提" class="headerlink" title="dp前提"></a>dp前提</h3><ul>
+<li>大问题可以拆成一些小问题</li>
+</ul>
+<p>典型反例：有环的图上不能跑DAG最短路算法来求最短路</p>
+<ul>
+<li>最优子结构性质</li>
+<li>大问题的最优解必须是从小问题的最优解（而不是其他垃圾解）推出来的。</li>
+<li>无后效性</li>
+<li>一个状态的决策，只与过去的结果有关，而与过去的决策无关</li>
+</ul>
+<h3 id="dp三连"><a href="#dp三连" class="headerlink" title="dp三连"></a>dp三连</h3><ul>
+<li>我是谁？            - 把(实际)局面表达为(数学)状态</li>
+<li>我从哪里来？        - 设计pull型的转移</li>
+<li>我到哪里去？        - 设计push型的转移</li>
+</ul>
+<p><strong>DP的过程，实际上就是在DAG上依次求出每个节点的value</strong></p>
+<p><code>总结一句：大事化小，小事化了。</code></p>
+<h4 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h4><p>DP有两种实现方式：按顺序递推 &amp; 记忆化搜索</p>
+<p>前者多用于push型的转移，后者多用于pull型的转移。</p>
+<h3 id="线性dp"><a href="#线性dp" class="headerlink" title="线性dp"></a>线性dp</h3>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/10/01/Luogu_Class_Autumn/">
+    <time datetime="2019-10-01T06:43:00.000Z" class="entry-date">
+        2019-10-01
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/csp-j/">csp-j</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/structure/">structure</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/10/04/Template/" rel="prev"><span class="meta-nav">←</span> Template</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/09/20/Undertale/" rel="next">Undertale <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/11/Blog_news/">Blog news 博客月报(爆)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">links</h3>
+    <div class="widget-content links">
+      <a href = "https://luckyfuy.top">luckyfuy's blog</a></br>
+      <a href = "https://slight.ink">Summer_Light blog</a></br>
+      <a href = "http://potatoj.com">Potato Online Judge</a></br>
+      <a href = "https://slight.ink/hfls-wiki/">HFLS-Wiki</a></br>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp-j/">csp-j</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/minecraft/">minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ptoj/">ptoj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/">timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undertale/">undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">contact_me</h3>
+    <div class="widget-content contact_me">
+      <a href = "https://www.luogu.org/space/show?uid=174590">Luogu</a></br>
+      <a href = "https://potatoj.com/user-home?username=li_zi_wei">Potato Online Juge</a></br>
+      <a href = "https://space.bilibili.com/392655749">Bilibili</a></br>
+      <a href = "https://user.qzone.qq.com/3155744679">QQ</a></br>
+    </div>
+      <a href = "https://github.com/Liziweiprogram">gayhub</a>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

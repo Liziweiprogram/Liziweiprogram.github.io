@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Template | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Li_zi_wei的板子们——">
+<meta name="keywords" content="csp-j,algorithm,structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Template">
+<meta property="og:url" content="https://lzwblog.xyz/2019/10/04/Template/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="Li_zi_wei的板子们——">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-11T14:10:54.818Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Template">
+<meta name="twitter:description" content="Li_zi_wei的板子们——">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/2019/10/11/Blog_news/">Blog_news</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Template" class="post-Template post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Template
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.xyz/2019/10/04/Template/" data-id="ck1m94egw001010to60b5igml" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="Li-zi-wei的板子们——"><a href="#Li-zi-wei的板子们——" class="headerlink" title="Li_zi_wei的板子们——"></a>Li_zi_wei的板子们——</h2><a id="more"></a>
+<h3 id="基本常用函数"><a href="#基本常用函数" class="headerlink" title="基本常用函数"></a>基本常用函数</h3><h4 id="isPrime"><a href="#isPrime" class="headerlink" title="isPrime"></a>isPrime</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">bool isprime(int a)</span><br><span class="line">&#123;</span><br><span class="line">	if(a &lt; 2) return 0;</span><br><span class="line">	if(a == 2) return 1;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 1;i * i &lt;= n;i ++)</span><br><span class="line">		&#123;</span><br><span class="line">			if(a % i == 0) return 1;</span><br><span class="line">		&#125;</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="大写转小写"><a href="#大写转小写" class="headerlink" title="大写转小写"></a>大写转小写</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">string change(string &amp;s)</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0;i &lt; s.size();i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		if(&apos;A&apos; &lt;= s[i]&amp;&amp; s[i] &lt;= &apos;Z&apos;) s[i] = s[i] - &apos;A&apos; + &apos;a&apos;;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="快读"><a href="#快读" class="headerlink" title="快读"></a>快读</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">inline void read(int &amp;a) </span><br><span class="line">&#123;</span><br><span class="line">    a = 0;</span><br><span class="line">    while (ch &lt; &apos;0&apos; || ch &gt; &apos;9&apos;) ch = getchar();</span><br><span class="line">    while (ch &gt;= &apos;0&apos; &amp;&amp; ch &lt;= &apos;9&apos;) a = a * 10 + ch - &apos;0&apos;, ch = getchar();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="快写"><a href="#快写" class="headerlink" title="快写"></a>快写</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">inline void write(int x)</span><br><span class="line">&#123;</span><br><span class="line">	if(!x)</span><br><span class="line">	&#123;	</span><br><span class="line">		putchar(&apos;0&apos;);</span><br><span class="line">		putchar(&apos;\n&apos;);</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	int cnt = 0;</span><br><span class="line"> 	while(x)</span><br><span class="line">	 &#123;</span><br><span class="line">	 	cnt ++;</span><br><span class="line">		buf[cnt] = (x % 10) + 48;</span><br><span class="line">		x /= 10;</span><br><span class="line">	 &#125;</span><br><span class="line">	while(cnt)</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(buf[cnt]);</span><br><span class="line">		cnt --; </span><br><span class="line">	&#125; </span><br><span class="line">	putchar(&apos;\n&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="高精度"><a href="#高精度" class="headerlink" title="高精度"></a>高精度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int a[10001];</span><br><span class="line">int b[10001];</span><br><span class="line">int c[10001];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void input(int num[]);</span><br><span class="line">void output(int num[]);</span><br><span class="line">void multiplicationplus(int a[],int b[],int c[]);//乘法</span><br><span class="line">void divisionplus(int a[],int b,int c[]);//除法</span><br><span class="line">void pplus(int a[],int b[],int c[]);//加法</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	memset(a,0,sizeof(a));</span><br><span class="line">    memset(b,0,sizeof(b));</span><br><span class="line">    memset(c,0,sizeof(c));</span><br><span class="line">	input(a);</span><br><span class="line">	input(b);</span><br><span class="line">    multiplicationplus(a,b,c);</span><br><span class="line">    output(c);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">void input(int num[])</span><br><span class="line">&#123;</span><br><span class="line">    int len;</span><br><span class="line">    string s;</span><br><span class="line">    cin &gt;&gt; s;</span><br><span class="line">    len = s.size();</span><br><span class="line">    for (int i = 1;i &lt;= len;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        num[len - i + 1] = s[i - 1] - &apos;0&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    num[0] = len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void output(int num[])</span><br><span class="line">&#123;</span><br><span class="line">    for (int i = num[0];i &gt; 0;i --)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; num[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line">void multiplicationplus(int a[],int b[],int c[])</span><br><span class="line">&#123;</span><br><span class="line">	int lc = a[0] + b[0] - 1;</span><br><span class="line">    for (int i = 1;i &lt;= a[0];i ++)</span><br><span class="line">    &#123;</span><br><span class="line">		for (int j = 1;j &lt;= b[0];j ++)</span><br><span class="line">		&#123;</span><br><span class="line">			c[i + j - 1] += a[i] * b[j];</span><br><span class="line">			c[i + j] += c[i + j - 1] / 10;</span><br><span class="line">			c[i + j - 1] %= 10;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	while (c[lc] == 0&amp;&amp;lc != 1)lc --;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    c[0] = lc;</span><br><span class="line">&#125;</span><br><span class="line">void divisionplus(int a[],int b,int c[])</span><br><span class="line">&#123;</span><br><span class="line">	int dividend,remainder = 0;</span><br><span class="line">	</span><br><span class="line">	for (int i = 1;i &lt;= a[0];i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		dividend = remainder * 10 + a[i];</span><br><span class="line">		c[i] = dividend / b;</span><br><span class="line">		remainder = dividend % b;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	int k = 1,lc = a[0];</span><br><span class="line">	</span><br><span class="line">	while (c[k] == 0)</span><br><span class="line">	&#123;</span><br><span class="line">		for (int i = 2;i &lt;= lc;i ++)</span><br><span class="line">		&#123;</span><br><span class="line">			c[i - 1] = c[i];</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		lc --; </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	c[0] = lc;</span><br><span class="line">&#125;</span><br><span class="line">void pplus(int a[],int b[],int c[])</span><br><span class="line">&#123;</span><br><span class="line">    int lc = a[0];</span><br><span class="line">    if (a[0] &lt; b[0]) lc = b[0];</span><br><span class="line">    for (int i = 1;i &lt;= lc;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        c[i] = c[i] + a[i] + b[i];</span><br><span class="line">        if (c[i] &gt; 9)</span><br><span class="line">        &#123;</span><br><span class="line">            c[i + 1] += (c[i] / 10);</span><br><span class="line">//            cout &lt;&lt; &quot;\ni:&quot; &lt;&lt; i &lt;&lt; &quot; c[i]:&quot; &lt;&lt; c[i] &lt;&lt; &quot; c[i+1]:&quot; &lt;&lt; c[i + 1] &lt;&lt; &quot; c[i]/10:&quot; &lt;&lt; c[i] / 10 &lt;&lt; &quot;\n&quot;;</span><br><span class="line">            c[i] = c[i] % 10;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if (c[lc + 1] &gt; 0)lc ++;</span><br><span class="line">    c[0] = lc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="高级板子"><a href="#高级板子" class="headerlink" title="高级板子"></a>高级板子</h3><h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std; </span><br><span class="line"></span><br><span class="line">int n;</span><br><span class="line">int a[1010];</span><br><span class="line">int b[1010];</span><br><span class="line"></span><br><span class="line">void Merge(int i)</span><br><span class="line">&#123;</span><br><span class="line">	for(int j = 1;j &lt;= n;j += i &lt;&lt; 1)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">		int x = j;</span><br><span class="line">		int y = j + i;</span><br><span class="line">		int z = j;</span><br><span class="line">		</span><br><span class="line">        while(x &lt; j + i &amp;&amp; y &lt;= n &amp;&amp; y &lt; j + 2 * i)</span><br><span class="line">        &#123;</span><br><span class="line">            if(a[x] &lt; a[y])</span><br><span class="line">            &#123;</span><br><span class="line">                b[z ++] = a[x ++];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                b[z ++] = a[y ++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        while(x &lt; j + i)</span><br><span class="line">        &#123;</span><br><span class="line">		</span><br><span class="line">            b[z ++] = a[x ++];</span><br><span class="line">        &#125;</span><br><span class="line">        while(y &lt; j + 2 * i &amp;&amp; y &lt;= n)</span><br><span class="line">        &#123;</span><br><span class="line">            b[z ++] = a[y ++];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for(int k = j;k &lt; j + 2 * i;k ++)</span><br><span class="line">        &#123;</span><br><span class="line">            a[k] = b[k];</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void read()</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	</span><br><span class="line">    for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">    	cin &gt;&gt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">void print()</span><br><span class="line">&#123;</span><br><span class="line">	for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	read();</span><br><span class="line">	</span><br><span class="line">    for(int i = 1;i &lt; n;i *= 2)</span><br><span class="line">    &#123;</span><br><span class="line">        Merge(i);</span><br><span class="line">//		cout &lt;&lt; endl;</span><br><span class="line">        print();</span><br><span class="line">//		cout &lt;&lt; endl; </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h4><p><strong>dp 二分</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">//写点注释(要当板子的qwq) </span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int a[100010],b[100010];</span><br><span class="line"></span><br><span class="line">int dp[100010];//dp</span><br><span class="line"></span><br><span class="line">int t[100010];//重排列 </span><br><span class="line"></span><br><span class="line">int n,len;</span><br><span class="line">int l,r,mid;</span><br><span class="line">char ch;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">//	memset(dp,100010,sizeof(dp));</span><br><span class="line">	for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		t[a[i]] = i; </span><br><span class="line">	&#125;</span><br><span class="line">	for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; b[i];</span><br><span class="line">		dp[i] = 100010;</span><br><span class="line">		//不知道哪个快qwq </span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	dp[0] = 0;</span><br><span class="line">	for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		l = 0;</span><br><span class="line">		r = len;</span><br><span class="line">		if(t[b[i]] &gt; dp[len])</span><br><span class="line">		&#123;</span><br><span class="line">			len ++;</span><br><span class="line">			dp[len] = t[b[i]];</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			while(l &lt; r)//二分 </span><br><span class="line">			&#123;</span><br><span class="line">				mid = l + (r - l) / 2;</span><br><span class="line">            	if(dp[mid] &gt; t[b[i]]) r = mid;</span><br><span class="line">            	else l = mid + 1; </span><br><span class="line">			&#125;</span><br><span class="line">			dp[l] = min(t[b[i]],dp[l]);</span><br><span class="line">		&#125;</span><br><span class="line">//		cout &lt;&lt; &quot;dp[&quot; &lt;&lt; i &lt;&lt; &quot;]: &quot; &lt;&lt; dp[i] &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; len;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(int i=1;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    for(int j=m;j&gt;=c[i];j--)</span><br><span class="line">    &#123;</span><br><span class="line">        if(f[j-c[i]]+w[i]&gt;f[j]) f[j]=f[j-c[i]]+w[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">&#123;</span><br><span class="line">	for (int j = c[i];j &lt;= m;j ++)</span><br><span class="line">	&#123;</span><br><span class="line">		f[j] = max(f[j],f[j - c[i]] + w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="最大子段和"><a href="#最大子段和" class="headerlink" title="最大子段和"></a>最大子段和</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int n,j,sum,maxx;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;         </span><br><span class="line">    scanf(&quot;%d %d&quot;,&amp;n,&amp;maxx);</span><br><span class="line">    </span><br><span class="line">    sum = maxx;</span><br><span class="line"></span><br><span class="line">    for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">    &#123;</span><br><span class="line">    	scanf(&quot;%d&quot;,&amp;j);</span><br><span class="line">    	if(sum &lt; 0) sum = 0;</span><br><span class="line">    	sum += j;</span><br><span class="line">    	if(maxx &lt; sum) maxx = sum;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%d&quot;,maxx);</span><br><span class="line">    return 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="单调队列-PTOJ-1063"><a href="#单调队列-PTOJ-1063" class="headerlink" title="单调队列(PTOJ 1063)"></a>单调队列(PTOJ 1063)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;deque&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">deque&lt;int&gt;q;</span><br><span class="line"></span><br><span class="line">int a[1000100];</span><br><span class="line">int n,m,h,t;</span><br><span class="line">string s;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123; </span><br><span class="line">	cin &gt;&gt; t;</span><br><span class="line">	for(int j = 1;j &lt;= t;j ++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; n &gt;&gt; m &gt;&gt; s;</span><br><span class="line">		for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">		&#123;</span><br><span class="line">			cin &gt;&gt; a[i];</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		while(!q.empty()) q.pop_back();</span><br><span class="line">		</span><br><span class="line">		if(s == &quot;min&quot;)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">			&#123;</span><br><span class="line">  	        	while(!q.empty()&amp;&amp;a[q.back()] &gt; a[i]) q.pop_back();</span><br><span class="line">  	        	q.push_back(i);</span><br><span class="line">   	        	if(i &gt;= m)</span><br><span class="line">				&#123;</span><br><span class="line">   	        	while(!q.empty()&amp;&amp;q.front() &lt;= i - m) q.pop_front();</span><br><span class="line">   	        	cout &lt;&lt; a[q.front()] &lt;&lt; &quot; &quot;;</span><br><span class="line">  	        	&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">			cout &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			for(int i = 1;i &lt;= n;i ++)</span><br><span class="line">			&#123;</span><br><span class="line">        		while(!q.empty()&amp;&amp;a[q.back()] &lt; a[i]) q.pop_back();</span><br><span class="line">        		q.push_back(i);</span><br><span class="line">        		if(i &gt;= m)</span><br><span class="line">				&#123;</span><br><span class="line">        		    while(!q.empty()&amp;&amp;q.front() &lt;= i - m) q.pop_front();</span><br><span class="line">        	    	cout &lt;&lt; a[q.front()] &lt;&lt; &quot; &quot;;</span><br><span class="line">        		&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    	</span><br><span class="line">    		cout &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1;i &lt;= n;i ++)</span><br><span class="line">&#123;</span><br><span class="line">	cin &gt;&gt; a[i];</span><br><span class="line">	a[i] += a[i - 1];</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/10/04/Template/">
+    <time datetime="2019-10-04T02:00:09.000Z" class="entry-date">
+        2019-10-04
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/csp-j/">csp-j</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/structure/">structure</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/10/04/Introduction_of_get_score(new)/" rel="prev"><span class="meta-nav">←</span> Introduction_of_get_score(new) 新版骗分导论(搬运)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/10/01/Luogu_Class_Autumn/" rel="next">Luogu_Class_Autumn <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/11/Blog_news/">Blog news 博客月报(爆)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">links</h3>
+    <div class="widget-content links">
+      <a href = "https://luckyfuy.top">luckyfuy's blog</a></br>
+      <a href = "https://slight.ink">Summer_Light blog</a></br>
+      <a href = "http://potatoj.com">Potato Online Judge</a></br>
+      <a href = "https://slight.ink/hfls-wiki/">HFLS-Wiki</a></br>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp-j/">csp-j</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/minecraft/">minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ptoj/">ptoj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/">timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undertale/">undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">contact_me</h3>
+    <div class="widget-content contact_me">
+      <a href = "https://www.luogu.org/space/show?uid=174590">Luogu</a></br>
+      <a href = "https://potatoj.com/user-home?username=li_zi_wei">Potato Online Juge</a></br>
+      <a href = "https://space.bilibili.com/392655749">Bilibili</a></br>
+      <a href = "https://user.qzone.qq.com/3155744679">QQ</a></br>
+    </div>
+      <a href = "https://github.com/Liziweiprogram">gayhub</a>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Vector基础 | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="性质 向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container）。跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。">
+<meta name="keywords" content="csp-j,structure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vector基础">
+<meta property="og:url" content="https://lzwblog.xyz/2019/07/27/Vector/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="性质 向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container）。跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-11T14:10:48.270Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vector基础">
+<meta name="twitter:description" content="性质 向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container）。跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/2019/10/11/Blog_news/">Blog_news</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Vector" class="post-Vector post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Vector基础
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.xyz/2019/07/27/Vector/" data-id="ck1m94egz001510to9xq6z06c" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
+<li>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container）。跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>顺序容器中的元素按照严格的线性顺序排序。可以通过元素在序列中的位置访问对应的元素。</p>
+</li>
+<li><p>支持对序列中的任意元素进行快速直接访问，甚至可以通过指针算述进行该操作。操供了在序列末尾相对快速地添加/删除元素的操作。</p>
+</li>
+<li><p>容器使用一个内存分配器对象来动态地处理它的存储需求。</p>
+</li>
+</ul>
+<h2 id="基本函数"><a href="#基本函数" class="headerlink" title="基本函数"></a>基本函数</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1. 构造函数"></a>1. 构造函数</h3><ul>
+<li><p><code>vector()</code>:创建一个空vector</p>
+</li>
+<li><p><code>vector(int nSize)</code>:创建一个vector,元素个数为nSize</p>
+</li>
+<li><p><code>vector(int nSize,const t&amp; t)</code>:创建一个vector，元素个数为nSize,且值均为t</p>
+</li>
+<li><p><code>vector(const vector&amp;)</code>:复制构造函数</p>
+</li>
+<li><p><code>vector(begin,end)</code>:复制[begin,end)区间内另一个数组的元素到vector中</p>
+</li>
+</ul>
+<h3 id="2-增加函数"><a href="#2-增加函数" class="headerlink" title="2. 增加函数"></a>2. 增加函数</h3><ul>
+<li><p><code>void push_back(const T&amp; x)</code>:向量尾部增加一个元素X</p>
+</li>
+<li><p><code>iterator insert(iterator it,const T&amp; x)</code>:向量中迭代器指向元素前增加一个元素x</p>
+</li>
+<li><p><code>iterator insert(iterator it,int n,const T&amp; x)</code>:向量中迭代器指向元素前增加n个相同的元素x</p>
+</li>
+<li><p><code>iterator insert(iterator it,const_iterator first,const_iterator last)</code>:向量中迭代器指向元素前插入另一个相同类型向量的[first,last)间的数据</p>
+</li>
+</ul>
+<h3 id="3-删除函数"><a href="#3-删除函数" class="headerlink" title="3. 删除函数"></a>3. 删除函数</h3><ul>
+<li><p><code>iterator erase(iterator it)</code>:删除向量中迭代器指向元素</p>
+</li>
+<li><p><code>iterator erase(iterator first,iterator last)</code>:删除向量中[first,last)中元素</p>
+</li>
+<li><p><code>void pop_back()</code>:删除向量中最后一个元素</p>
+</li>
+<li><p><code>void clear()</code>:清空向量中所有元素</p>
+</li>
+</ul>
+<h3 id="4-遍历函数"><a href="#4-遍历函数" class="headerlink" title="4. 遍历函数"></a>4. 遍历函数</h3><ul>
+<li><p><code>reference at(int pos)</code>:返回pos位置元素的引用</p>
+</li>
+<li><p><code>reference front()</code>:返回首元素的引用</p>
+</li>
+<li><p><code>reference back()</code>:返回尾元素的引用</p>
+</li>
+<li><p><code>iterator begin()</code>:返回向量头指针，指向第一个元素</p>
+</li>
+<li><p><code>iterator end()</code>:返回向量尾指针，指向向量最后一个元素的下一个位置</p>
+</li>
+<li><p><code>reverse_iterator rbegin()</code>:反向迭代器，指向最后一个元素</p>
+</li>
+<li><p><code>reverse_iterator rend()</code>:反向迭代器，指向第一个元素之前的位置</p>
+</li>
+</ul>
+<h3 id="5-判断函数"><a href="#5-判断函数" class="headerlink" title="5. 判断函数"></a>5. 判断函数</h3><ul>
+<li><code>bool empty() const</code>:判断向量是否为空，若为空，则向量中无元素</li>
+</ul>
+<h3 id="6-大小函数"><a href="#6-大小函数" class="headerlink" title="6. 大小函数"></a>6. 大小函数</h3><ul>
+<li><p><code>int size() const</code>:返回向量中元素的个数</p>
+</li>
+<li><p><code>int capacity() const</code>:返回当前向量张红所能容纳的最大元素值</p>
+</li>
+<li><p><code>int max_size() const</code>:返回最大可允许的vector元素数量值</p>
+<h3 id="7-其他函数"><a href="#7-其他函数" class="headerlink" title="7. 其他函数"></a>7. 其他函数</h3></li>
+<li><p><code>void swap(vector&amp;)</code>:交换两个同类型向量的数据</p>
+</li>
+<li><code>void assign(int n,const T&amp; x)</code>:设置向量中第n个元素的值为x</li>
+<li><code>void assign(const_iterator first,const_iterator last</code>):向量中[first,last)中元素设置成当前向量元素</li>
+</ul>
+<h3 id="8-自己看看"><a href="#8-自己看看" class="headerlink" title="8. 自己看看"></a>8. 自己看看</h3><ul>
+<li><p><code>push_back</code> 在数组的最后添加一个数据</p>
+</li>
+<li><p><code>pop_back</code> 去掉数组的最后一个数据</p>
+</li>
+<li><p><code>at</code> 得到编号位置的数据</p>
+</li>
+<li><p><code>begin</code> 得到数组头的指针</p>
+</li>
+<li><p><code>end</code> 得到数组的最后一个单元+1的指针</p>
+</li>
+<li><p><code>front</code> 得到数组头的引用</p>
+</li>
+<li><p><code>back</code> 得到数组的最后一个单元的引用</p>
+</li>
+<li><p><code>max_size</code> 得到vector最大可以是多大</p>
+</li>
+<li><p><code>capacity</code> 当前vector分配的大小</p>
+</li>
+<li><p><code>size</code> 当前使用数据的大小</p>
+</li>
+<li><p><code>resize</code> 改变当前使用数据的大小，如果它比当前使用的大，者填充默认值</p>
+</li>
+<li><p><code>reserve</code> 改变当前$vector$所分配空间的大小</p>
+</li>
+<li><p><code>erase</code> 删除指针指向的数据项</p>
+</li>
+<li><p><code>clear</code> 清空当前的vector</p>
+</li>
+<li><p><code>rbegin</code> 将vector反转后的开始指针返回(其实就是原来的$end-1$)</p>
+</li>
+<li><p><code>rend</code> 将vector反转构的结束指针返回(其实就是原来的$begin-1$)</p>
+</li>
+<li><p><code>empty</code> 判断vector是否为空</p>
+</li>
+<li><p><code>swap</code> 与另一个vector交换数据</p>
+</li>
+</ul>
+<h3 id="9-头文件"><a href="#9-头文件" class="headerlink" title="9.头文件"></a>9.头文件</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt; vector&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><ol>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vector&lt;类型&gt;标识符</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vector&lt;类型&gt;标识符(最大容量)</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vector&lt;类型&gt;标识符(最大容量,初始所有值)</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Int i[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125; </span><br><span class="line">Vector&lt;类型&gt;vi(I,i+<span class="number">2</span>);<span class="comment">//得到i索引值为3以后的值</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vector&lt; <span class="built_in">vector</span>&lt; <span class="keyword">int</span>&gt; &gt;v; 二维向量<span class="comment">//这里最外的&lt;&gt;要有空格。否则在比较旧的编译器下无法通过</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/07/27/Vector/">
+    <time datetime="2019-07-27T06:38:11.000Z" class="entry-date">
+        2019-07-27
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/csp-j/">csp-j</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/structure/">structure</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/07/29/Build-Blog(in Github)/" rel="prev"><span class="meta-nav">←</span> Build-Blog(in Github)</a></span>
+    
+    
+        <span class="nav-next"><a href="/1029/09/07/Target/" rel="next">Target <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/11/Blog_news/">Blog news 博客月报(爆)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">links</h3>
+    <div class="widget-content links">
+      <a href = "https://luckyfuy.top">luckyfuy's blog</a></br>
+      <a href = "https://slight.ink">Summer_Light blog</a></br>
+      <a href = "http://potatoj.com">Potato Online Judge</a></br>
+      <a href = "https://slight.ink/hfls-wiki/">HFLS-Wiki</a></br>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp-j/">csp-j</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/minecraft/">minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ptoj/">ptoj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/">timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undertale/">undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">contact_me</h3>
+    <div class="widget-content contact_me">
+      <a href = "https://www.luogu.org/space/show?uid=174590">Luogu</a></br>
+      <a href = "https://potatoj.com/user-home?username=li_zi_wei">Potato Online Juge</a></br>
+      <a href = "https://space.bilibili.com/392655749">Bilibili</a></br>
+      <a href = "https://user.qzone.qq.com/3155744679">QQ</a></br>
+    </div>
+      <a href = "https://github.com/Liziweiprogram">gayhub</a>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
