@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="PTOJ管理中最蒟">
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Build-mkdocs(Mkdocs安装) | Li_zi_wei_blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="mkdocs安装指南">
+<meta name="keywords" content="using">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Build-mkdocs(Mkdocs安装)">
+<meta property="og:url" content="https://lzwblog.xyz/2019/11/09/Build-mkdocs/index.html">
+<meta property="og:site_name" content="Li_zi_wei_blog">
+<meta property="og:description" content="mkdocs安装指南">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/11/09/Nl1aYZdxSIecgXr.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/09/HyMAb12NQBJrjS7.png">
+<meta property="og:image" content="https://i.loli.net/2019/11/09/28vblWxE36TKLNf.png">
+<meta property="og:updated_time" content="2019-11-09T00:35:44.795Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Build-mkdocs(Mkdocs安装)">
+<meta name="twitter:description" content="mkdocs安装指南">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/09/Nl1aYZdxSIecgXr.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Li_zi_wei_blog" rel="home">Li_zi_wei_blog</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">Do you wanna have a qaq time?</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Blog_news/Timeline/">Timeline</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/Blog_news">Blog_news</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-Build-mkdocs" class="post-Build-mkdocs post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      Build-mkdocs(Mkdocs安装)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="https://lzwblog.xyz/2019/11/09/Build-mkdocs/" data-id="ck2quaoqx0000yctooircovnk" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <h3 id="mkdocs安装指南"><a href="#mkdocs安装指南" class="headerlink" title="mkdocs安装指南"></a><strong>mkdocs安装指南</strong></h3><a id="more"></a>
+<hr>
+<p>网上材料好的差的都有 所以来写一篇</p>
+<h4 id="搭建博客材料：git-Node-js-Github账号-邮箱验证过-pip-你的github博客-否则请回去看Building-Blog-in-Github"><a href="#搭建博客材料：git-Node-js-Github账号-邮箱验证过-pip-你的github博客-否则请回去看Building-Blog-in-Github" class="headerlink" title="搭建博客材料：git Node.js Github账号(邮箱验证过) pip 你的github博客(否则请回去看Building-Blog(in Github))"></a>搭建博客材料：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> <a href="https://nodejs.org/dist/v10.16.0/node-v10.16.0-x64.msi" target="_blank" rel="noopener">Node.js</a> <a href="https://github.com" target="_blank" rel="noopener">Github</a>账号(邮箱验证过) <a href="http://pip.readthedocs.org/en/latest/installing.html" target="_blank" rel="noopener">pip</a> 你的github博客(否则请回去看Building-Blog(in Github))</h4><p><del>还是这些</del></p>
+<hr>
+<h2 id="mkdocs-是什么"><a href="#mkdocs-是什么" class="headerlink" title="mkdocs 是什么?"></a>mkdocs 是什么?</h2><p>如果你不喜欢hexo的风格(每个文件都是/year/month/day/name)的,mkdocs会是一个搭建博客的好选择(文件路径就是直接/mkdocsname/name)</p>
+<p>但是mkdocs必须在你已经有xxx.github.io仓库了才可以 而且搭建完成后,路径(进入mkdocs)一定是xxx.github.io/mkdocsname</p>
+<p>当然你也可以选择CNAME,但那是另外一回事了</p>
+<h2 id="开始搭建mkdocs"><a href="#开始搭建mkdocs" class="headerlink" title="开始搭建mkdocs"></a>开始搭建mkdocs</h2><p>P.S 名称为<code>xxxxxname</code>的都是你自己的项目名称 请不要直接复制</p>
+<p>首先,先在github上弄一个叫”Yourmkdocsname”(里面是你项目名字)的仓库(初始化+Readme)</p>
+<p>然后 <code>git clone git@github.com:yourgithubname/yourmkdocsname.git</code>(自己填好你的yourgithubname和yourmkdocsname)</p>
+<p><img src="https://i.loli.net/2019/11/09/Nl1aYZdxSIecgXr.png" alt="文件夹"></p>
+<p>接下来 在gitclone下来的文件夹里<code>mkdocs new yourmkdocsname</code></p>
+<p>然后你看到的应该是这样的:</p>
+<p><img src="https://i.loli.net/2019/11/09/HyMAb12NQBJrjS7.png" alt="image.png"></p>
+<p>doc文件夹里还有一份<code>index.md</code></p>
+<p>这时候你是不是发现你的路径至少是<code>&gt; yourmkdocsname &gt; yourmkdocsname</code>?</p>
+<p>把刚刚弄的东西搬出来(也就是把路径缩短成<code>&gt; youemkdocsname</code>)</p>
+<h3 id="mkdocs-yml"><a href="#mkdocs-yml" class="headerlink" title="mkdocs.yml"></a>mkdocs.yml</h3><p>首先给大家看看示范mkdocs.yml(也就是我的)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># Project infoemation</span><br><span class="line">site_name: Blog_news #yourmkdocsname</span><br><span class="line">site_description: Blog_news #yourmkdocsname</span><br><span class="line">site_author: Li_zi_wei #yourname</span><br><span class="line">site_url: https://liziweiprogram.github.io/Blog_news #yourgithubrepositoty</span><br><span class="line"></span><br><span class="line"># Repository</span><br><span class="line">repo_name: &apos;liziweiprogram/Blog_news&apos; #yourgithubrepositoty</span><br><span class="line">repo_url: &apos;https://github.com/liziweiprogram/Blog_news&apos; #yourgithubrepositotywebside</span><br><span class="line"></span><br><span class="line"># Copyright</span><br><span class="line">copyright: &apos;Copyright &amp;copy; 2019 Li_zi_wei&apos; #yourmkdocscopyright</span><br><span class="line"></span><br><span class="line"># Configuration</span><br><span class="line">theme: readthedocs #yourmkdocstheme</span><br><span class="line"></span><br><span class="line"># nav(yourmkdocsstructure)</span><br><span class="line"></span><br><span class="line">nav:</span><br><span class="line">  - index: index.md</span><br><span class="line">  - archives:</span><br><span class="line">    - 2019y10m: 2019y10m.md</span><br><span class="line">    - 2019y11m: 2019y11m.md</span><br><span class="line">  - help:</span><br><span class="line">    - about: about.md</span><br><span class="line">    - QA: QA.md</span><br><span class="line">    - Timeline: Timeline.md</span><br></pre></td></tr></table></figure>
+<p>P.S nav里面的<code>about.md</code>等 都是自己的<code>md文件</code></p>
+<p>这样的nav路径效果如下</p>
+<p><img src="https://i.loli.net/2019/11/09/28vblWxE36TKLNf.png" alt="nav"></p>
+<p>我因为搞这个花了不知道多少时间</p>
+<p>另外 mkdocs还有其他主题 可以自己去<code>https://markdown-docs-zh.readthedocs.io</code>看theme</p>
+<h2 id="update"><a href="#update" class="headerlink" title="update"></a>update</h2><p>如果你的mkdocs.yml以及md都弄好了 接下来可以预览了</p>
+<blockquote>
+<p><code>mkdocs serve</code></p>
+</blockquote>
+<p>如果显示正常 成功了一半(没成功回去看.yml是不是炸了)</p>
+<p>效果差不多是<code>hexo s</code></p>
+<p>(Ctrl+C结束预览)</p>
+<p>接下来</p>
+<blockquote>
+<p><code>mkdocs build</code></p>
+</blockquote>
+<p>效果差不多是<code>hexo g</code></p>
+<p>最后</p>
+<blockquote>
+<p><code>mkdocs gh-deploy</code></p>
+</blockquote>
+<p>效果差不多是<code>hexo d</code></p>
+<p>但是我在这里出了问题——开始弄的时候文件夹不是git clone下来的(所以如果按前面弄应该没问题了)</p>
+<p>End.</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2019/11/09/Build-mkdocs/">
+    <time datetime="2019-11-09T00:03:23.000Z" class="entry-date">
+        2019-11-09
+    </time>
+</a>
+    
+    
+  <span class="article-delim">&#8226;</span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/using/">using</a></li></ul>
+
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/9102/07/03/Timeline/" rel="prev"><span class="meta-nav">←</span> Timeline</a></span>
+    
+    
+        <span class="nav-next"><a href="/2019/10/04/Introduction_of_get_score(new)/" rel="next">Introduction_of_get_score(new) 新版骗分导论(搬运) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/9102/07/27/index/">Welcome</a>
+          </li>
+        
+          <li>
+            <a href="/9102/07/03/Timeline/">Timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/Build-mkdocs/">Build-mkdocs(Mkdocs安装)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Introduction_of_get_score(new)/">Introduction_of_get_score(new) 新版骗分导论(搬运)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/Template/">Template</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">links</h3>
+    <div class="widget-content links">
+      <a href = "https://luckyfuy.top">luckyfuy's blog</a></br>
+      <a href = "https://slight.ink">Summer_Light blog</a></br>
+      <a href = "http://potatoj.com">Potato Online Judge</a></br>
+      <a href = "https://hflswiki.github.io/hfls-wiki/">HFLS-Wiki</a></br>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-content">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">algorithm</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/csp-j/">csp-j</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/game/">game</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/index/">index</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mathematics/">mathematics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/minecraft/">minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ptoj/">ptoj</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/structure/">structure</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/timeline/">timeline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/undertale/">undertale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/using/">using</a><span class="tag-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">contact_me</h3>
+    <div class="widget-content contact_me">
+      <a href = "https://www.luogu.org/space/show?uid=174590">Luogu</a></br>
+      <a href = "https://potatoj.com/user-home?username=li_zi_wei">Potato Online Juge</a></br>
+      <a href = "https://space.bilibili.com/392655749">Bilibili</a></br>
+      <a href = "https://user.qzone.qq.com/3155744679">QQ</a></br>
+    </div>
+      <a href = "https://github.com/Liziweiprogram">gayhub</a>
+  </aside>
+
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2019 Li_zi_wei
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+
+
+</body>
+</html>
